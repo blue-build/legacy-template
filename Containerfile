@@ -8,17 +8,11 @@ COPY etc /etc
 COPY ublue-firstboot /usr/bin
 COPY recipe.yml /etc/ublue-recipe.yml
 
+COPY build.sh /tmp/build.sh
+
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
-RUN rpm-ostree override remove firefox firefox-langpacks
-
-RUN echo "-- Installing RPMs defined in recipe.yml --" && \
-    rpm_packages=$(yq '.rpms[]' < /etc/ublue-recipe.yml) && \
-    for pkg in $rpm_packages; do \
-        echo "Installing: ${pkg}" && \
-        rpm-ostree install $pkg; \
-    done && \ 
-    echo "---"
+RUN /tmp/build.sh
 
 RUN rm -rf \
         /tmp/* \
