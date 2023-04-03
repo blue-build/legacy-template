@@ -18,6 +18,8 @@ description: A bespoke Fedora Kinoite install.
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
   - python3-pip # needed for yafti (the first boot installer)
+  - harfbuzz-icu
+  - harfbuzz
   - clamav-freshclam
   - clamd
   - clamtk
