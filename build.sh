@@ -2,15 +2,29 @@
 # don't remove the default firefox (from fedora) in favor of the flatpak (U2F broken on Flatpak)
 # rpm-ostree override remove firefox firefox-langpacks
 
-# remove a bunch of codecs and other stuff that you'll replace with the RPMFusion ones
-rpm-ostree override remove libavfilter-free libavformat-free libpostproc-free libswresample-free libavutil-free libswscale-free libavcodec-free mesa-va-drivers toolbox
-
 echo "-- Installing RPMs defined in recipe.yml --"
 rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
 for pkg in $(echo -e "$rpm_packages"); do \
     echo "Installing: ${pkg}" && \
     rpm-ostree install $pkg; \
 done
+echo "---"
+
+echo "-- Installing RPMFusion and related codecs --"
+# remove a bunch of codecs and other stuff that you'll replace with the RPMFusion ones
+rpm-ostree override remove toolbox && \
+rpm-ostree install \
+https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
+rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release \
+--uninstall rpmfusion-free-release \
+--uninstall rpmfusion-nonfree-release && \
+rpm-ostree install intel-media-driver libva-intel-driver && \
+rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld && \
+rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
+rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi && \
+mkdir -p /etc/distrobox && \
+echo "container_image_default=\"registry.fedoraproject.org/fedora-toolbox:$(rpm -E %fedora)\"" >> /etc/distrobox/distrobox.conf
 echo "---"
 
 # install yafti to install flatpaks on first boot, https://github.com/ublue-os/yafti
