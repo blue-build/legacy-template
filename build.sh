@@ -2,14 +2,6 @@
 # don't remove the default firefox (from fedora) in favor of the flatpak (U2F broken on Flatpak)
 # rpm-ostree override remove firefox firefox-langpacks
 
-echo "-- Installing RPMs defined in recipe.yml --"
-rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
-for pkg in $(echo -e "$rpm_packages"); do \
-    echo "Installing: ${pkg}" && \
-    rpm-ostree install $pkg; \
-done
-echo "---"
-
 echo "-- Installing RPMFusion and related codecs --"
 # remove a bunch of codecs and other stuff that you'll replace with the RPMFusion ones
 rpm-ostree override remove toolbox && \
@@ -25,6 +17,14 @@ rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free lib
 rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi && \
 mkdir -p /etc/distrobox && \
 echo "container_image_default=\"registry.fedoraproject.org/fedora-toolbox:$(rpm -E %fedora)\"" >> /etc/distrobox/distrobox.conf
+echo "---"
+
+echo "-- Installing RPMs defined in recipe.yml --"
+rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
+for pkg in $(echo -e "$rpm_packages"); do \
+    echo "Installing: ${pkg}" && \
+    rpm-ostree install $pkg; \
+done
 echo "---"
 
 # install yafti to install flatpaks on first boot, https://github.com/ublue-os/yafti
