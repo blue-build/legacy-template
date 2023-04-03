@@ -18,6 +18,38 @@ description: A bespoke Fedora Kinoite install.
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
   - python3-pip # needed for yafti (the first boot installer)
+  - clamav-freshclam
+  - clamd
+  - clamtk
+  - cups-pdf
+  - distrobox
+  - fcitx5-chinese-addons
+  - fcitx5-configtool
+  - fcitx5-gtk
+  - fcitx5-qt
+  - fcitx5-table-extra
+  - fcitx5-table-other
+  - gimagereader-qt
+  - hunspell-fr
+  - igt-gpu-tools
+  - kcron
+  - libreoffice
+  - libreoffice-kf5
+  - libva-utils
+  - libvirt-client
+  - lm_sensors
+  - mono-core
+  - neofetch
+  - plasma-nm-fortisslvpn
+  - python3-libguestfs
+  - seahorse
+  - skanpage
+  - squashfs-tools
+  - syncthing
+  - tesseract-langpack-chi_sim
+  - tesseract-langpack-chi_tra
+  - tesseract-langpack-fra
+  - virt-manager
 
 # these flatpaks (from flathub) will be available for install on boot
 # this is just an example selection, and even if you leave it empty,
