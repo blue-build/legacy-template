@@ -1,18 +1,18 @@
 # the image will be at ghcr.io/yourusername/name
-name: startingpoint
+name: cerulean
 
 # what native container image to build on top of
 # images not built by ublue might function unexpectly
-base-container: ghcr.io/ublue-os/silverblue-main
+base-container: ghcr.io/ublue-os/kinoite-main
 
 # what fedora version to use, you can just change this to the next version update
 # if you change this to "latest", you will be automatically updated
 # to the next major version assuming the image you're using as your base container
 # builds with the tag (all uBlue images do)
-fedora-version: 37
+fedora-version: 38
 
 # this description will be visible in the containers metadata
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: A bespoke Fedora Kinoite install.
 
 # these rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
@@ -23,11 +23,33 @@ rpms:
 # this is just an example selection, and even if you leave it empty,
 # you'll have the basic options available in yafti
 flatpaks:
-  - org.mozilla.firefox
-  - org.mozilla.Thunderbird
-  - com.mattjakeman.ExtensionManager
-  - org.libreoffice.LibreOffice
-  - org.gnome.DejaDup
-  - org.gustavoperedo.FontDownloader
-  - com.github.tchx84.Flatseal
-  - io.github.celluloid_player.Celluloid
+- ca.hamaluik.Timecop
+- ch.theologeek.Manuskript
+- com.authy.Authy
+- com.borgbase.Vorta
+- com.discordapp.Discord
+- com.github.PintaProject.Pinta
+- com.github.zocker_160.SyncThingy
+- com.moonlight_stream.Moonlight
+- com.parsecgaming.parsec
+- com.skype.Client
+- com.valvesoftware.Steam
+- com.wire.WireDesktop
+- in.srev.guiscrcpy
+- io.crow_translate.CrowTranslate
+- io.github.dosbox-staging
+- io.github.giantpinkrobots.bootqt
+- io.github.jacalz.rymdport
+- org.atheme.audacious
+- org.chromium.Chromium
+- org.chromium.Chromium.Codecs
+- org.freeplane.App
+- org.keepassxc.KeePassXC
+- org.mozilla.Thunderbird
+- org.prismlauncher.PrismLauncher
+- org.signal.Signal
+- org.telegram.desktop
+- org.telegram.desktop.webview
+- org.videolan.VLC
+- org.zotero.Zotero
+- us.zoom.Zoom
