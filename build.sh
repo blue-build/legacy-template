@@ -2,6 +2,9 @@
 # don't remove the default firefox (from fedora) in favor of the flatpak (U2F broken on Flatpak)
 # rpm-ostree override remove firefox firefox-langpacks
 
+# remove a bunch of codecs and other stuff that you'll replace with the RPMFusion ones
+rpm-ostree override remove libavfilter-free libavformat-free libpostproc-free libswresample-free libavutil-free libswscale-free libavcodec-free mesa-va-drivers toolbox
+
 echo "-- Installing RPMs defined in recipe.yml --"
 rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
 for pkg in $(echo -e "$rpm_packages"); do \
