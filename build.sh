@@ -19,6 +19,9 @@ mkdir -p /etc/distrobox && \
 echo "container_image_default=\"registry.fedoraproject.org/fedora-toolbox:$(rpm -E %fedora)\"" >> /etc/distrobox/distrobox.conf
 echo "---"
 
+# for some reason ublue has an obsolete version of harfbuzz that is borking Libreoffice installs
+rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-8a7ee41959
+
 echo "-- Installing RPMs defined in recipe.yml --"
 rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
 for pkg in $(echo -e "$rpm_packages"); do \
