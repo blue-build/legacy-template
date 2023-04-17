@@ -21,6 +21,9 @@ rpms:
   - python3-pip # needed for yafti (the first boot installer)
   - gnome-shell-extension-pop-shell
   - xprop
+  - podman
+  - podman-compose
+  - code
 
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.

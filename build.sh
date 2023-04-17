@@ -2,6 +2,10 @@
 # remove the default firefox (from fedora) in favor of the flatpak
 rpm-ostree override remove firefox firefox-langpacks
 
+echo "-- Import GPG Keys for rpm-ostree --"
+mkdir -p /etc/yum.gpg.keys
+wget -O  /etc/yum.gpg.keys/microsoft.vscode.asc https://packages.microsoft.com/keys/microsoft.asc
+
 echo "-- Installing RPMs defined in recipe.yml --"
 rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
 for pkg in $(echo -e "$rpm_packages"); do \
