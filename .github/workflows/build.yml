@@ -138,6 +138,8 @@ jobs:
 
       # Sign container
       - uses: sigstore/cosign-installer@main
+        with:
+          cosign-release: 'v1.13.1'
 
       # Only needed when running `cosign sign` using a key
       - name: Write signing key to disk
@@ -157,6 +159,8 @@ jobs:
 
       # Sign container
       - uses: sigstore/cosign-installer@v3.0.2
+        with:
+          cosign-release: 'v1.13.1'
         if: github.event_name != 'pull_request'
 
       - name: Sign container image
