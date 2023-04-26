@@ -23,6 +23,9 @@ For the base-image field, you can use any other native container image. You will
 
 If you want to add custom configuration files, you can just add them in the `etc` directory. If you need to add other directories, you can look at the Containerfile to see how it's done. Writing to any directories under `/var` in Fedora Silverblue are not supported and will not work, as those are user-managed.
 
+> **Note**
+> The configuration files you put in the `etc` directory are actually added to `/usr/etc/` where they get applied to your local `/etc/` when rebasing to or updating the image. If a config file in `/etc/` has been changed, the changes won't be overridden, but the new version will be available in `/usr/etc/`. Run `sudo ostree admin config-diff` to see the difference between `/etc/` and `/usr/etc/` (`man ostree-admin-config-diff` for further documentation).
+
 ### Custom build scripts
 
 If you want to execute custom shell script or commands in the image build, you shouldn't edit `build.sh` or the `Containerfile` directly. Instead, you can create a shell script in the `scripts/` directory (look at the `example.sh`). After creating your script, enable it in the `scripts:` section of your `recipe.yml`.
