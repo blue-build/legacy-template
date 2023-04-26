@@ -62,6 +62,21 @@ nix-me-up:
   /usr/bin/ublue-nix-install
 
 update:
+  #!/bin/bash
+  echo "Staging system update..."
   rpm-ostree update
+
+  echo "Updating Flatpaks..."
   flatpak update -y
+
+  echo "Updating Distroboxes..."
   distrobox upgrade -a
+
+  if command -v nix-channel >/dev/null 2>&1
+  then
+    echo "Updating Nix..."
+    nix-channel --update
+    nix-env -u '*'
+    systemctl daemon-reload
+    systemctl restart nix-daemon
+  fi
