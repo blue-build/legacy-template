@@ -95,6 +95,15 @@ echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.con
 
 sleep 1
 
+echo "Adding /etc/profile.d/nix-app-icons.sh"
+
+sudo rm -f /etc/profile.d/nix-app-icons.sh 
+sudo tee /etc/profile.d/nix-app-icons.sh <<EOF
+XDG_DATA_DIRS="$HOME/.nix-profile/share:/nix/var/nix/profiles/default/share:$XDG_DATA_DIRS"
+EOF
+
+sleep 1
+
 echo "Installing nix backup"
 
 sudo mkdir /opt/nixbackup
