@@ -96,6 +96,7 @@ After that run the following commands:
   - `just distrobox-ubuntu`
 - `just setup-flatpaks` - Install all of the flatpaks declared in recipe.yml
 - `just setup-gaming` - Install Steam, Heroic Game Launcher, OBS Studio, Discord, Boatswain, Bottles, and ProtonUp-Qt. MangoHud is installed and enabled by default, hit right Shift-F12 to toggle
+- `just nix-me-up` - Install Nix with dnkmmr69420's Nix Silverblue install script
 - `just update` - Update rpm-ostree, flatpaks, and distroboxes in one command
 
 Check the [just website](https://just.systems) for tips on modifying and adding your own recipes.
