@@ -30,6 +30,10 @@ If you want to add custom configuration files, you can just add them in the `etc
 
 If you want to execute custom shell script or commands in the image build, you shouldn't edit `build.sh` or the `Containerfile` directly. Instead, you can create a shell script in the `scripts/` directory (look at the `example.sh`). After creating your script, enable it in the `scripts:` section of your `recipe.yml`.
 
+### Custom package repositories
+
+If you want to add custom package repositories to your image, you can include these in the `recipe.yml` as list under the `extrarepos:` section. The urls must be proper .repo files. Use this to add *copr repositories* to your image.s
+
 ### Building multiple images
 
 You can build multiple images using multiple `recipe.yml` files. They will share the Containerfile and everything else, but things like packages declared in the recipe will be different between the images. For a more robust multibuild setup, you could consider forking from the [ublue-os/main](https://github.com/ublue-os/main/) repo, which was built from the purpose.
