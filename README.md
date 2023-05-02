@@ -32,9 +32,7 @@ If you want to execute custom shell script or commands in the image build, you s
 
 ### Custom package repositories
 
-If you want to add custom package repositories to your image, you can include these in the `recipe.yml` as list under the `extrarepos:` section. The urls **must** be proper `.repo` files (like `https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo`). Use this to add for example *copr repositories* to your project.
-
-In the build process, the .repo file will be downloaded and placed inside /etc/yum.repos.d/ so that rpm-ostree can access it.
+If you want to add custom package repositories to your image, you can include them in the `recipe.yml` as a list of URLs under the `extrarepos:` section. They **must** be proper `.repo` files (like `https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo`). You can use this to add [COPR repositories](https://copr.fedorainfracloud.org/) to your image.
 
 #### What is a Copr Repository?
 
