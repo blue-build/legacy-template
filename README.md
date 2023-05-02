@@ -32,14 +32,10 @@ If you want to execute custom shell script or commands in the image build, you s
 
 ### Custom package repositories
 
-If you want to add custom package repositories to your image, you can include them in the `recipe.yml` as a list of URLs under the `extrarepos:` section. They **must** be proper `.repo` files (like `https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo`). You can use this to add [COPR repositories](https://copr.fedorainfracloud.org/) to your image.
+If you want to add custom package repositories to your image, you can include them in the `recipe.yml` as a list of URLs under the `extrarepos:` section. They **must** be proper `.repo` files (like `https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo`). In the build process, the `.repo` file will be downloaded and placed inside `/etc/yum.repos.d/` where rpm-ostree can access it.
 
-#### What is a Copr Repository?
-
-> Copr is a build system available for everybody. You provide the src.rpm and Copr provides a yum repository. Copr can be used for upstream builds, for continuous integration, or to provide a yum repository for users of your project, if your project is not yet included in the standard Fedora repositories.
-> https://docs.pagure.org/copr.copr/user_documentation.html#what-is-the-purpose-of-copr
-
-The packages are unofficial and are provided as-is by owner of the copr repo. Any use of the provided paclages and repositories is at your own risk.
+You can use this to add [COPR repositories](https://copr.fedorainfracloud.org/) to your image.
+COPR is like the Arch User Repository for Fedora, where you can find extra packages that wouldn't otherwise be available. The repositories are community-created, so use them at your own risk. [Read more](https://docs.pagure.org/copr.copr/user_documentation.html)
 
 ### Building multiple images
 
