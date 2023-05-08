@@ -27,15 +27,17 @@ scripts:
 extrarepos:
   # example:
   # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo
+  - https://copr.fedorainfracloud.org/coprs/tigro/python-validity/repo/fedora-38/python-validity-fedora-38.repo
 
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
-  # needed for yafti (the first boot installer) (remove if you're not using yafti)
   - fish
+  - fprintd-clients
+  - fprintd-clients-pam
+  - open-fprintd
   - python3-pip
-  # - libadwaita # libadwaita comes with silverblue, but not with other flavors
-  # add your own below
+  - python3-validity
 
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
