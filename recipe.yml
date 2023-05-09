@@ -21,6 +21,7 @@ description: A starting point for further customization of uBlue images. Make yo
 # Place scripts in scripts/ and put the corresponding filename here
 scripts:
 - 1password.sh
+- chezmoi.sh
 
 # a list of urls of .repo files that should be added to your system
 # this is the proper way to add copr repos to your image
