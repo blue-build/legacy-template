@@ -4,7 +4,7 @@
 name: mimillieuhubluenvidia
 
 # The native container image to build on top of.
-# Warning: Non-uBlue images might not work properly, due to missing components.
+# Warning: Non-uBlue images might not function properly.
 base-image: ghcr.io/ublue-os/silverblue-nvidia
 
 # What Fedora version to use. Use an explicit version or `latest`.
@@ -26,14 +26,14 @@ scripts:
   # repos have been imported (so that you can access those repos if necessary).
   pre:
     # Automatically runs script files within "scripts/pre/".
-    - autorun.sh
+    # - autorun.sh
     # Manually listed scripts.
     # - example_pre.sh
 
   # "Post" scripts run at the end of the build process.
   post:
     # Automatically runs script files within "scripts/post/".
-    - autorun.sh
+    # - autorun.sh
     # Manually listed scripts.
     # - example_post.sh
 
