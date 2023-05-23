@@ -1,11 +1,11 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: mimillieuhubluenvidia
+name: startingpoint
 
 # The native container image to build on top of.
-# Warning: Non-uBlue images might not function properly.
-base-image: ghcr.io/ublue-os/silverblue-nvidia
+# Warning: Non-uBlue images might not work properly, due to missing components.
+base-image: ghcr.io/ublue-os/silverblue-main
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/silverblue-nvidia
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: Custom ublue image for my needs
+description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -26,14 +26,14 @@ scripts:
   # repos have been imported (so that you can access those repos if necessary).
   pre:
     # Automatically runs script files within "scripts/pre/".
-    # - autorun.sh
+    - autorun.sh
     # Manually listed scripts.
     # - example_pre.sh
 
   # "Post" scripts run at the end of the build process.
   post:
     # Automatically runs script files within "scripts/post/".
-    # - autorun.sh
+    - autorun.sh
     # Manually listed scripts.
     # - example_post.sh
 
@@ -64,19 +64,13 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-   - firefox
-   - kernel-tools
-   - langpacks-fr
-   - mesa-libGLU
-   - alsa-plugins-pulseaudio
-   - gnome-themes-extra
-   - gtk-murrine-engine
-   - neofetch
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
+    - firefox
+    - firefox-langpacks
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
@@ -93,46 +87,5 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-  - org.gnome.Calendar
-  - org.gnome.Weather
-  - org.gnome.Firmware
-  - com.mattjakeman.ExtensionManager
-  - ca.desrt.dconf-editor
-  - com.anydesk.Anydesk
-  - com.authy.Authy
-  - com.discordapp.Discord
-  - com.github.IsmaelMartinez.teams_for_linux
-  - com.mastermindzh.tidal-hifi
-  - com.mattjakeman.ExtensionManager
-  - com.nextcloud.desktopclient.nextcloud
-  - com.rtosta.zapzap
-  - com.usebottles.bottles
-  - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
-  - com.valvesoftware.Steam.Utility.gamescopel
-  - com.visualstudio.code
-  - net.cozic.joplin_desktop
-  - net.lutris.Lutris
-  - org.audacityteam.Audacity
-  - org.audacityteam.Audacity.Codecs
-  - org.chromium.Chromium
-  - org.chromium.Chromium.Codecs
-  - org.filezillaproject.Filezilla
-  - org.gimp.GIMP
-  - org.gimp.GIMP.Plugin.FocusBlur
-  - org.gimp.GIMP.Plugin.Fourier
-  - org.gimp.GIMP.Plugin.GMic
-  - org.gimp.GIMP.Plugin.Lensfun
-  - org.gimp.GIMP.Plugin.LiquidRescale
-  - org.gimp.GIMP.Plugin.Resynthesizer
-  - org.gnome.Evince
-  - org.gnome.TextEditor
-  - org.gnome.Totem
-  - org.gnome.Totem.Codecs
-  - org.gnome.Totem.Videosite.YouTubeDl
-  - org.gnome.eog
-  - org.onlyoffice.desktopeditors
-  - org.prismlauncher.PrismLauncher
-  - org.qbittorrent.qBittorrent
-  - org.remmina.Remmina
-  - org.gimp.GIMP.Plugin.Resynthesizer
-  - org.gimp.GIMP.Plugin.Resynthesizer
+    - io.github.celluloid_player.Celluloid
+    - org.kde.krita
