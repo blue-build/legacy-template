@@ -1,6 +1,6 @@
 # Starting point
 
-[![build-ublue](https://github.com/noahdotpy/myublue/actions/workflows/build.yml/badge.svg)](https://github.com/noahdotpy/startingpoint/actions/workflows/build.yml)
+[![build-ublue](https://github.com/noahdotpy/myublue/actions/workflows/build.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build.yml)
 
 This is a constantly updating custom [native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable). GitHub builds this image. and then hosts it on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
