@@ -1,5 +1,5 @@
 ARG FEDORA_MAJOR_VERSION=38
-ARG BASE_IMAGE_URL=quay.io/fedora-ostree-desktops/silverblue
+ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
 FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
 ARG RECIPE=./recipe.yml

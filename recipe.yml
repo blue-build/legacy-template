@@ -1,11 +1,11 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: silverblue-fsync
+name: startingpoint
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: quay.io/fedora-ostree-desktops/silverblue
+base-image: ghcr.io/ublue-os/silverblue-main
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -14,7 +14,7 @@ base-image: quay.io/fedora-ostree-desktops/silverblue
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: Latest stock Silverblue with kernel-fsync
+description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -77,7 +77,7 @@ firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
   # which is the preferred uBlue "first boot" GUI. Set this to "false" if you've
   # decided to use a different solution instead.
-  yafti: false
+  yafti: true
 
   # These Flatpaks will be suggested for install after user login, via the yafti
   # "first boot" GUI. Everything below will be merged into the "yafti.yml" config
@@ -87,5 +87,5 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    #- io.github.celluloid_player.Celluloid
-    #- org.kde.krita
+    - io.github.celluloid_player.Celluloid
+    - org.kde.krita
