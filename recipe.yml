@@ -62,8 +62,14 @@ rpm:
     # if you ever download or compile any custom software on your machine.
     - libadwaita
     # Add your own below:
-    # Example:
-    # - tilix
+    - bat
+    - exa
+    - fd-find
+    - fish
+    - fzf
+    - kitty
+    - ripgrep
+    - neovim
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
