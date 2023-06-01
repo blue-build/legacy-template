@@ -8,7 +8,7 @@ set -uo pipefail
 function log {
 	LEVEL=$1
 	shift
-	echo "[${LEVEL:^^}]" $@ >&2
+	echo "[${LEVEL}]" $@ >&2
 }
 
 if [ "$EUID" = 0 ] ; then
