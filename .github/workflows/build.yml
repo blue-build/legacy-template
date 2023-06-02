@@ -53,6 +53,9 @@ jobs:
           - gnome.yml
           - plasma.yml
           - xfce.yml
+          - budgie.yml
+          - lxqt.yml
+          - mate.yml
 
     steps:
       # Checkout push-to-registry action GitHub repository
