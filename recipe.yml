@@ -92,6 +92,7 @@ rpm:
     - gnome-initial-setup
     - gnome-session-xsession
     - gnome-system-monitor
+    - gstreamer1-plugins-good-qt
     - nano
     - nano-default-editor
     - qt5-qtbase
