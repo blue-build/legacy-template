@@ -47,9 +47,9 @@ rpm:
   # which greatly simplifies future maintenance of your custom recipe.
   repos:
     # Example (which also demonstrates version number expansion):
-    # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/nielsenb/android-udev-rules/repo/fedora-%FEDORA_VERSION%/nielsenb-android-udev-rules-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-%FEDORA_VERSION%/zeno-scrcpy-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/deathwish/emacs-pgtk-nativecomp/repo/fedora-%FEDORA_VERSION%/deathwish-emacs-pgtk-nativecomp-fedora-%FEDORA_VERSION%.repo
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
@@ -63,7 +63,12 @@ rpm:
     # if you ever download or compile any custom software on your machine.
     - libadwaita
     # Add your own below:
+    - android-udev-rules
+    - beets
+    - beets-plugins
+    - emacs
     - gnome-console
+    - scrcpy
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
