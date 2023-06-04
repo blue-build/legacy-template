@@ -1,20 +1,20 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: siverblue-experimental-antrlmbd
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-experimental
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this).
-fedora-version: 38
+fedora-version: latest
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: silverblue-experimental with packages i use + trimming some of the default fedora fat
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -48,7 +48,8 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-
+    - https://copr.fedorainfracloud.org/coprs/nielsenb/android-udev-rules/repo/fedora-%FEDORA_VERSION%/nielsenb-android-udev-rules-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-%FEDORA_VERSION%/zeno-scrcpy-fedora-%FEDORA_VERSION%.repo
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
@@ -62,8 +63,7 @@ rpm:
     # if you ever download or compile any custom software on your machine.
     - libadwaita
     # Add your own below:
-    # Example:
-    # - tilix
+    - gnome-console
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -71,7 +71,45 @@ rpm:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
     - firefox-langpacks
-
+    # GNOME Console will be installed, so we don't need this.
+    - gnome-terminal
+    - gnome-terminal-nautilus
+    # Remove all GNOME extensions for a more vanilla experience.
+    - gnome-shell-extension-background-logo
+    # Trimming the fat
+    - default-editor
+    - desktop-backgrounds-gnome
+    - fedora-bookmarks
+    - fedora-chromium-config
+    - fedora-workstation-backgrounds
+    - qgnomeplatform-qt5
+    - gnome-backgrounds
+    - gnome-classic-session
+    - gnome-disk-utility
+    - gnome-initial-setup
+    - gnome-session-xsession
+    - gnome-system-monitor
+    - nano
+    - nano-default-editor
+    - qt5-qtbase
+    - qt5-qtbase-gui
+    - qt5-qtdeclarative
+    - qt5-qtxmlpatterns
+    - xorg-x11-drv-amdgpu
+    - xorg-x11-drv-ati
+    - xorg-x11-drv-evdev
+    - xorg-x11-drv-fbdev
+    - xorg-x11-drv-libinput
+    - xorg-x11-drv-nouveau
+    - xorg-x11-drv-qxl
+    - xorg-x11-drv-wacom
+    - xorg-x11-server-Xorg
+    - xorg-x11-xauth
+    - xorg-x11-xinit
+    - xorg-x11-drv-intel
+    - xorg-x11-drv-openchrome
+    - xorg-x11-drv-vesa
+    - xorg-x11-drv-vmware
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
@@ -87,5 +125,18 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+    - com.usebottles.bottles
+    - de.haeckerfelix.Fragments
+    - de.haeckerfelix.Shortwave
+    - io.bassi.Amberol
     - io.github.celluloid_player.Celluloid
+    - hu.kramo.Cartridges
+    - org.gnome.Builder
+    - org.gnome.Boxes
+    - org.gnome.Calculator
+    - org.gnome.FileRoller
+    - org.gnome.Loupe
     - org.kde.krita
+    - org.nickvision.tubeconverter
+    - re.sonny.Playhouse
+    - re.sonny.Workbench
