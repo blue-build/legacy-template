@@ -79,6 +79,7 @@ rpm:
     # Remove all GNOME extensions for a more vanilla experience.
     - gnome-shell-extension-background-logo
     # Won't be needing this
+    - adwaita-qt5
     - default-editor
     - desktop-backgrounds-gnome
     - fedora-bookmarks
