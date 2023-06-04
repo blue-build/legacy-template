@@ -109,7 +109,6 @@ rpm:
     - xorg-x11-drv-qxl
     - xorg-x11-drv-wacom
     - xorg-x11-server-Xorg
-    - xorg-x11-xauth
     - xorg-x11-drv-intel
     - xorg-x11-drv-openchrome
     - xorg-x11-drv-vesa
