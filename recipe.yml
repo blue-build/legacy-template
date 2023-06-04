@@ -98,6 +98,8 @@ rpm:
     - qt5-qtdeclarative
     - qt5-qtxmlpatterns
     - qt5-qtquickcontrols
+    - qt5-qtwayland
+    - qt5-qtx11extras
     - xorg-x11-drv-amdgpu
     - xorg-x11-drv-ati
     - xorg-x11-drv-evdev
@@ -108,7 +110,6 @@ rpm:
     - xorg-x11-drv-wacom
     - xorg-x11-server-Xorg
     - xorg-x11-xauth
-    - xorg-x11-xinit
     - xorg-x11-drv-intel
     - xorg-x11-drv-openchrome
     - xorg-x11-drv-vesa
