@@ -73,7 +73,7 @@ rpm:
     - gnome-terminal-nautilus
     # Remove all GNOME extensions for a more vanilla experience.
     - gnome-shell-extension-background-logo
-    # Trimming the fat
+    # Won't be needing this
     - default-editor
     - desktop-backgrounds-gnome
     - fedora-bookmarks
