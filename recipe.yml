@@ -97,7 +97,7 @@ rpm:
     - qt5-qtbase-gui
     - qt5-qtdeclarative
     - qt5-qtxmlpatterns
-    - qt5-qtquickcontrols
+    - qt5-qtquickcontrols2
     - qt5-qtwayland
     - qt5-qtx11extras
     - xorg-x11-drv-amdgpu
