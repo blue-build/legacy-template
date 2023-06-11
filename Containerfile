@@ -9,6 +9,18 @@ ARG FEDORA_MAJOR_VERSION=38
 # Warning: changing this might not do anything for you. Read comment above.
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
+
+FROM registry.fedoraproject.org/fedora-minimal:${FEDORA_MAJOR_VERSION} as keyd_builder
+WORKDIR /tmp
+RUN dnf upgrade \
+  && dnf install wget gcc \
+  && wget https://github.com/rvaiya/keyd/archive/refs/tags/v2.4.3.tar.gz \
+  && tar xvf v2.4.3.tar.gz \
+  && make && sudo make install
+
+
+
+
 FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
 
 # The default recipe set to the recipe's default filename
@@ -30,6 +42,11 @@ COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
 # "yq" used in build.sh and the "setup-flatpaks" just-action to read recipe.yml.
 # Copied from the official container image since it's not available as an RPM.
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
+
+COPY --from=keyd_builder /usr/lib/systemd/system/keyd* /usr/lib/systemd/system/keyd.service 
+COPY --from=keyd_builder /usr/bin/keyd* /usr/bin/
+COPY --from=keyd_builder /usr/share/doc/keyd/ /usr/share/doc/keyd/ 
+COPY --from=keyd_builder /usr/share/man/man1/keyd*.gz /usr/share/man/man1/keyd*.gz 
 
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
