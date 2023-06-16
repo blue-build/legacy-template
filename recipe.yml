@@ -92,3 +92,4 @@ firstboot:
     - org.mozilla.firefox
     - com.mattjakeman.ExtensionManager
     - com.github.GradienceTeam.Gradience
+    - com.github.marhkb.Pods
