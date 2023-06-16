@@ -51,6 +51,7 @@ jobs:
       matrix:
         recipe:
           - recipe.yml
+          - nvidia-recipe.yml
 
     steps:
       # Checkout push-to-registry action GitHub repository
