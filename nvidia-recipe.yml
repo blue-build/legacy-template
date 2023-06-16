@@ -73,6 +73,8 @@ rpm:
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - gnome-console
+    - firefox
+    - firefox-langpacks
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
