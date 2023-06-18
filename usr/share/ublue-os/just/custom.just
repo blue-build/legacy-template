@@ -26,7 +26,3 @@ setup-gaming:
   flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications 
   flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam 
   flatpak override --user --env=MANGOHUD=1 com.heroicgameslauncher.hgl 
-
-nix-me-up:
-  echo 'Setting phasers to kill. Installing nix.'
-  /usr/bin/ublue-nix-install
