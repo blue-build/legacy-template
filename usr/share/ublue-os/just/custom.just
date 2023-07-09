@@ -1,4 +1,8 @@
-!include /usr/share/ublue-os/just/bling.just
+# You can also include some bling onto your justfile
+# It includes some definitions for distroboxes, nix, gaming, and a lot more!
+
+# set allow-duplicate-recipes
+# !include /usr/share/ublue-os/just/bling.just
 
 # install all flatpaks defined in recipe.yml
 setup-flatpaks:
