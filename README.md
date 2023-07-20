@@ -55,7 +55,7 @@ If you want to completely disable yafti, simply set the recipe's `firstboot.yaft
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ```
-sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/fronkr56/silverscreen:latest
+sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/apricotant/silverscreen:latest
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
