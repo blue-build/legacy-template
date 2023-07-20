@@ -87,8 +87,11 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+    - com.github.debauchee.barrier
     - com.brave.Browser
     - com.chatterino.chatterino
-    - com.github.debauchee.barrier
-    - org.mozilla.Thunderbird
+    - com.github.iwalton3.jellyfin-mpv-shim
     - io.mpv.Mpv
+    - org.mozilla.Thunderbird
+
+    - com.github.iwalton3.jellyfin-mpv-shim
