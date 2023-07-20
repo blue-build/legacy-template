@@ -5,7 +5,7 @@ name: silverscreen
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/silverblue-main
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/bluefin
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: ublue-os Fedora (Silver)blue OCI Image for Split(screen) Media Consumption
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -55,12 +55,12 @@ rpm:
   # at the "system level" in the final image.
   install:
     # Needed for yafti (the first boot installer). Remove if you're not using yafti.
-    # - python3-pip
+    - python3-pip
     # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
     # other spins. You can remove if you aren't using yafti, but many native
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
-    # - libadwaita
+    - libadwaita
     # Add your own below:
     # Example:
     # - tilix
@@ -69,8 +69,8 @@ rpm:
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    # - firefox
-    # - firefox-langpacks
+    - firefox
+    - firefox-langpacks
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
@@ -87,5 +87,7 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
+    - com.brave.Browser
+    - com.chatterino.chatterino
+    - com.github.debauchee.barrier
+    - org.mozilla.Thunderbird
