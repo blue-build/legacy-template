@@ -90,6 +90,6 @@ firstboot:
     - com.github.debauchee.barrier
     - com.brave.Browser
     - com.chatterino.chatterino
+    - com.google.Chrome
     - com.github.iwalton3.jellyfin-mpv-shim
     - io.mpv.Mpv
-    - org.mozilla.Thunderbird
