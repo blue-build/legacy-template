@@ -87,6 +87,15 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+  # Gnome Apps
+    - org.gnome.Calculator
+    - org.gnome.baobab
+    - org.gnome.Evince
+    - com.mattjakeman.ExtensionManager
+    - org.gnome.font-viewer
+    - org.gnome.eog
+    - org.gnome.TextEditor
+  # Silverscreen Apps
     - com.github.debauchee.barrier
     - com.brave.Browser
     - com.chatterino.chatterino
