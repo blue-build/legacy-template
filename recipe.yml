@@ -91,3 +91,4 @@ firstboot:
     - com.chatterino.chatterino
     - com.github.debauchee.barrier
     - org.mozilla.Thunderbird
+    - io.mpv.Mpv
