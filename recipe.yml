@@ -93,5 +93,3 @@ firstboot:
     - com.github.iwalton3.jellyfin-mpv-shim
     - io.mpv.Mpv
     - org.mozilla.Thunderbird
-
-    - com.github.iwalton3.jellyfin-mpv-shim
