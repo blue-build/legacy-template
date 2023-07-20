@@ -1,4 +1,4 @@
-# Ublue Fedora (Silver)blue OCI Image for Split(screen) Media Consumption
+# ublue-os Fedora (Silver)blue OCI Image for Split(screen) Media Consumption
 
 [![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
 
