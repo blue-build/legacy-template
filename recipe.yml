@@ -77,7 +77,7 @@ firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
   # which is the preferred uBlue "first boot" GUI. Set this to "false" if you've
   # decided to use a different solution instead.
-  yafti: true
+  yafti: false
 
   # These Flatpaks will be suggested for install after user login, via the yafti
   # "first boot" GUI. Everything below will be merged into the "yafti.yml" config
