@@ -50,6 +50,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%FEDORA_VERSION%/solopasha-hyprland-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%FEDORA_VERSION%/alebastr-sway-extras-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
+
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
