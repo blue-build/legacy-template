@@ -61,9 +61,29 @@ rpm:
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
     # - libadwaita
-    # Add your own below:
-    # Example:
-    # - tilix
+    # Hyprland Build Setup
+    - ninja-build
+    - cmake
+    - meson
+    - gcc-c++
+    - libxcb-devel
+    - libX11-devel
+    - pixman-devel
+    - wayland-protocols-devel
+    - cairo-devel
+    - pango-devel
+    # i3 Setup
+    - kitty
+    - i3-config-fedora
+    - rofi
+    - nvtop
+    - xset
+    - htop
+    - feh
+    - arandr
+    - xsetroot
+    - xdotool
+    - xev
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -88,6 +108,7 @@ firstboot:
   # This is just an example selection:
   flatpaks:
   # Silverscreen Apps
+    - org.freedesktop.Platform.openh264
     - com.github.debauchee.barrier
     - com.brave.Browser
     - com.google.Chrome
