@@ -1,6 +1,6 @@
-# Starting point
+# ublue-hyprland
 
-[![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
+[![build-ublue](https://github.com/Jaques22/ublue-hyprland/actions/workflows/build.yml/badge.svg)](https://github.com/Jaques22/ublue-hyprland/actions/workflows/build.yml)
 
 This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
@@ -96,17 +96,9 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
   systemctl reboot
   ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
 - Then rebase to the signed image, like so:
   ```
   sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jaques22/ublue-hyprland:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
   ```
 - Reboot again to complete the installation
   ```
