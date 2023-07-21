@@ -1,0 +1,12 @@
+[Unit]
+#Before=systemd-user-sessions.service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/zenbook3402-audio.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

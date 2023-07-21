@@ -24,6 +24,9 @@ ARG RECIPE=./recipe.yml
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
 
+# Copy greetd & systemd configs
+COPY etc /etc
+
 # Copy the recipe that we're building.
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
 
