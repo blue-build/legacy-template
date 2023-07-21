@@ -96,9 +96,17 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
   systemctl reboot
   ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
 - Then rebase to the signed image, like so:
   ```
   sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jaques22/ublue-hyprland:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
   ```
 - Reboot again to complete the installation
   ```
