@@ -1,0 +1,10 @@
+[Unit]
+Description=Update the home folder on boot
+Documentation=https://github.com/coreos/rpm-ostree/issues/1944
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/update-home.sh
+
+[Install]
+WantedBy=multi-user.target
