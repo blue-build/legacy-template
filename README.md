@@ -146,4 +146,3 @@ After doing that, you'll be able to run the following commands:
 - `just update` - Update rpm-ostree, flatpaks, and distroboxes in one command
 
 Check the [just website](https://just.systems) for tips on modifying and adding your own recipes.
-
