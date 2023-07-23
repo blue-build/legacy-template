@@ -57,6 +57,7 @@ RUN rpm -ivh /ublue-os-update-services.noarch.rpm
 COPY scripts /tmp/scripts
 
 RUN sudo wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo
+RUN rpm-ostree install ffmpeg ffmpeg-libs ffmpegthumbnailer intel-media-driver libheif-freeworld libva-intel-driver mesa-va-drivers-freeworld pipewire-codec-aptx
 RUN rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-bore-lto
 
 # Run the build script, then clean up temp files and finalize container build.
