@@ -52,8 +52,7 @@ COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-udev-rules.noarch.rpm 
 COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-update-services.noarch.rpm /
 RUN rpm -ivh /ublue-os-udev-rules.noarch.rpm
 RUN rpm -ivh /ublue-os-update-services.noarch.rpm
-RUN systemctl disable flatpak-user-update.service
-RUN systemctl disable flatpak-system-update.service
+
 # Copy the build script and all custom scripts.
 COPY scripts /tmp/scripts
 
