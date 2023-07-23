@@ -5,7 +5,7 @@ name: kursios
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: quay.io/fedora-ostree-desktops/silverblue
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -64,20 +64,70 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    - adw-gtk3-theme
+    - mpv
+    - lutris
+    - gnome-text-editor
+    - eog
+    - evince
+    - fastfetch
+    - gamemode
+    - alsa-firmware
+    - apr
+    - apr-util
+    - distrobox
+    - ffmpeg
+    - ffmpeg-libs
+    - ffmpegthumbnailer
+    - fzf
+    - grub2-tools-extra
+    - heif-pixbuf-loader
+    - htop
+    - intel-media-driver
+    - libheif-freeworld
+    - libheif-tools
+    - libratbag-ratbagd
+    - libva-intel-driver
+    - libva-utils
+    - lshw
+    - mesa-va-drivers-freeworld
+    - net-tools
+    - google-noto-sans-javanese-fonts
+    - google-noto-sans-balinese-fonts
+    - google-noto-sans-sundanese-fonts
+    - nvme-cli
+    - nvtop
+    - openrgb-udev-rules
+    - openssl
+    - podman-compose
+    - pipewire-codec-aptx
+    - smartmontools
+    - symlinks
+    - tcpdump
+    - tmux
+    - traceroute
+    - vim
+    - zstd
+    - wireguard-tools
+    - gnome-tweaks
+    - raw-thumbnailer
+    - aria2
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
-    # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - firefox
-    - firefox-langpacks
+    - gnome-software-rpm-ostree
+    - gnome-software
+    - yelp
+    - gnome-tour
+    - gnome-system-monitor
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
   # which is the preferred uBlue "first boot" GUI. Set this to "false" if you've
   # decided to use a different solution instead.
-  yafti: true
+  yafti: false
 
   # These Flatpaks will be suggested for install after user login, via the yafti
   # "first boot" GUI. Everything below will be merged into the "yafti.yml" config
@@ -87,5 +137,3 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
