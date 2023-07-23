@@ -59,7 +59,7 @@ COPY scripts /tmp/scripts
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 RUN wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo
 # RUN rpm-ostree install ffmpeg ffmpeg-libs ffmpegthumbnailer intel-media-driver libheif-freeworld libva-intel-driver mesa-va-drivers-freeworld pipewire-codec-aptx
-RUN rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-bore-lto
+RUN rpm-ostree override remove libavcodec-free kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-bore-lto
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/scripts/build.sh && \
