@@ -95,6 +95,7 @@ rpm:
     - nwg-look
     - lightdm
     - lightdm-gtk-greeter
+    - slick-greeter
     - SwayNotificationCenter
     
     # These RPMs will be removed from the system image. This step happens during
