@@ -50,6 +50,8 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%FEDORA_VERSION%/solopasha-hyprland-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%FEDORA_VERSION%/alebastr-sway-extras-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%FEDORA_VERSION%/erikreider-SwayNotificationCenter-fedora-%FEDORA_VERSION%.repo
+
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
@@ -93,6 +95,7 @@ rpm:
     - nwg-look
     - lightdm
     - lightdm-gtk-greeter
+    - SwayNotificationCenter
     
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
