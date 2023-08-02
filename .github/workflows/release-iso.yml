@@ -1,5 +1,8 @@
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - "iso"
 name: release-iso
 jobs:
   release-iso:
