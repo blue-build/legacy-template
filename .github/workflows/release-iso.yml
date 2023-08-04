@@ -8,6 +8,8 @@ jobs:
   release-iso:
     name: Generate and Release ISOs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container: 
       image: fedora:38
       options: --privileged
