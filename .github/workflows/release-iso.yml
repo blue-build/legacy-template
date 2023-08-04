@@ -31,7 +31,7 @@ jobs:
       - name: Upload ISO
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run:
+        run: |
           gh release delete auto-iso -y
           gh release create auto-iso ${{ steps.isogenerator.outputs.iso-path }} -t ISO -n "This is an automatically generated ISO release." -R ${{ github.repository_owner }}/${{ github.event.repository.name }}
       - name: Upload SHA256SUM
