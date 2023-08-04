@@ -32,8 +32,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          gh release delete auto-iso -y -R ${{ github.repository_owner }}/${{ github.event.repository.name }}
-          gh release create auto-iso ${{ steps.isogenerator.outputs.iso-path }} -t ISO -n "This is an automatically generated ISO release." -R ${{ github.repository_owner }}/${{ github.event.repository.name }}
+          if gh release list -R ${{ github.repository_owner }}/${{ github.event.repository.name }} | grep "auto-iso"; then
+            gh release upload auto-iso ${{ steps.isogenerator.outputs.iso-path }} -R ${{ github.repository_owner }}/${{ github.event.repository.name }}
+          else
+            gh release create auto-iso ${{ steps.isogenerator.outputs.iso-path }} -t ISO -n "This is an automatically generated ISO release." -R ${{ github.repository_owner }}/${{ github.event.repository.name }}
+          fi
       - name: Upload SHA256SUM
         env:
           GITHUB_TOKEN: ${{ github.token }}
