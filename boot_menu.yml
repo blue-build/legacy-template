@@ -1,0 +1,5 @@
+ublue_variants:
+  - label: einohr/linuxyz
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: einohr/linuxyz
