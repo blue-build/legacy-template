@@ -1,8 +1,10 @@
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - "iso"
+    paths:
+      - 'boot_menu.yml'
+      - '.github/workflows/release-iso.yml'
+  workflow_dispatch:
+
 name: release-iso
 jobs:
   release-iso:
