@@ -14,8 +14,7 @@ base-image: ghcr.io/ublue-os/base-main
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: "This is my personal Ublue OS image with hyprland and other
-  packages that I use. "
+description: "This is my personal Ublue OS image configured with Hyprland. Based on ublue-os."
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -57,16 +56,15 @@ rpm:
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
   install:
-    # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
-    # other spins. You can remove if you aren't using yafti, but many native
-    # apps and binaries require it, so it's a good idea to always include it
-    # if you ever download or compile any custom software on your machine.
+    # Themes
     - libadwaita
+    - adw-gtk3-theme
+    - adwaita-qt6
 
     # For me
     - zsh
     - rclone # onedrive syncing
-    - neovim
+    - neovim # text editor
     - ranger # term file manager
     - 'gcc-c++' # required for github?
     - gh # github creds
@@ -74,9 +72,9 @@ rpm:
     
     # Stuff for Hyprland
     - hyprland
-    - xdg-desktop-portal-hyprland
+    - xdg-desktop-portal-hyprland 
     - waybar # status bar
-    - wofi
+    - wofi # app launcher
     - hyprpaper # wallpaper
     - hyprshot # screenshots
     - dunst # notifs
@@ -85,20 +83,20 @@ rpm:
     - network-manager-applet # network in waybar tray
     - blueman # bluetooth in waybar tray
     - blueman-nautilus
-    - brightnessctl
-    - fontawesome-fonts
+    - brightnessctl # control laptop brightness
+    - fontawesome-fonts # waybar symbols
     - udiskie # usb drive auto-mount 
     #- greetd
     - distrobox
     #- greetd-gtkgreet
-    - copyq
-    - nwg-look
-    - lightdm
+    - copyq # real copy-paste w/ history
+    - nwg-look # gtk settings
+    - lightdm # greeter
     - lightdm-gtk-greeter
     - slick-greeter
-    - SwayNotificationCenter
-    - gnome-software
-    - nemo
+    - SwayNotificationCenter # notification daemon + GUI
+    - gnome-software # app store for flatpaks
+    - nemo # file explorer
     
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
