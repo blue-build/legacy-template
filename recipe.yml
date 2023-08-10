@@ -127,7 +127,7 @@ firstboot:
     - org.gnome.DejaDup
     - org.gustavoperedo.FontDownloader
     - com.github.tchx84.Flatseal
-    - io.github.celluloid_player.Celluloid
+    - iorg.videolan.VLC
     - md.obsidian.Obsidian
     - com.discordapp.Discord
     - com.spotify.Client
