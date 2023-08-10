@@ -123,7 +123,6 @@ firstboot:
   # This is just an example selection:
   flatpaks:
     - org.mozilla.firefox
-    - com.mattjakeman.ExtensionManager
     - org.gnome.DejaDup
     - org.gustavoperedo.FontDownloader
     - com.github.tchx84.Flatseal
