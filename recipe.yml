@@ -77,7 +77,6 @@ rpm:
     - wofi # app launcher
     - hyprpaper # wallpaper
     - hyprshot # screenshots
-    - dunst # notifs
     - swaylock # lock screen
     - swayidle # lock screen on idle
     - network-manager-applet # network in waybar tray
