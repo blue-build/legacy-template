@@ -82,7 +82,6 @@ rpm:
     - swayidle # lock screen on idle
     - network-manager-applet # network in waybar tray
     - blueman # bluetooth in waybar tray
-    - blueman-nautilus
     - brightnessctl # control laptop brightness
     - fontawesome-fonts # waybar symbols
     - udiskie # usb drive auto-mount 
