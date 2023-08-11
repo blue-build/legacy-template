@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: ublueBG
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -64,6 +64,22 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    - gnome-tweaks
+    - nmap
+    - vim
+    - thunar
+    - thunar-archive-plugin
+    - thunar-media-tags-plugin
+    - virt-install
+    - virt-manager
+    - virt-top
+    - virt-viewer
+    - qemu-kvm
+    - gnome-shell-extension-appindicator
+    - gnome-shell-extension-blur-my-shell
+    - gnome-shell-extension-dash-to-dock
+    - libvirt-daemon-config-network
+    - libvirt-daemon-kvm
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -87,5 +103,35 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
+  #  - io.github.celluloid_player.Celluloid
+  #  - org.kde.krita
+    - com.anydesk.Anydesk
+    - com.github.eneshecan.WhatsAppForLinux
+    - com.github.jeromerobert.pdfarranger
+    - com.github.tchx84.Flatseal
+    - com.google.Chrome
+    - com.jetbrains.PyCharm-Community
+    - com.spotify.Client
+    - com.usebottles.bottles
+    - com.visualstudio.code-oss
+    - org.chromium.Chromium
+    - org.chromium.Chromium.Codecs
+    - org.filezillaproject.Filezilla
+    - org.gimp.GIMP
+    - org.gimp.GIMP.Plugin.BIMP
+    - org.gnome.Boxes
+    - org.gnome.Boxes.Extension.OsinfoDb
+    - org.gnome.DejaDup
+    - org.gtk.Gtk3theme.Adwaita-dark
+    - org.gtk.Gtk3theme.Breeze
+    - org.inkscape.Inkscape
+    - org.libreoffice.LibreOffice
+    - org.mozilla.firefox
+    - org.nmap.Zenmap
+    - org.raspberrypi.rpi-imager
+    - org.remmina.Remmina
+    - org.rncbc.qpwgraph
+    - org.signal.Signal
+    - org.videolan.VLC
+    - rest.insomnia.Insomnia
+    - com.mattjakeman.ExtensionManager
