@@ -70,6 +70,7 @@ rpm:
     - thunar
     - thunar-archive-plugin
     - thunar-media-tags-plugin
+    - thunar-volman
     - virt-install
     - virt-manager
     - virt-top
@@ -77,9 +78,16 @@ rpm:
     - qemu-kvm
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-blur-my-shell
-    - gnome-shell-extension-dash-to-dock
+    - gnome-shell-extension-pop-shell
+    - gnome-shell-extension-system-monitor-applet
+    - gnome-shell-extension-sound-output-device-chooser
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
+    - distrobox
+    - gparted
+    - kdiskmark
+    - okular
+    - wireshark
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -87,6 +95,8 @@ rpm:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
     - firefox-langpacks
+    - toolbox
+    - gnome-shell-extension-background-logo
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
@@ -110,7 +120,7 @@ firstboot:
     - com.github.jeromerobert.pdfarranger
     - com.github.tchx84.Flatseal
     - com.google.Chrome
-    - com.jetbrains.PyCharm-Community
+#    - com.jetbrains.PyCharm-Community
     - com.spotify.Client
     - com.usebottles.bottles
     - com.visualstudio.code-oss
@@ -119,8 +129,6 @@ firstboot:
     - org.filezillaproject.Filezilla
     - org.gimp.GIMP
     - org.gimp.GIMP.Plugin.BIMP
-    - org.gnome.Boxes
-    - org.gnome.Boxes.Extension.OsinfoDb
     - org.gnome.DejaDup
     - org.gtk.Gtk3theme.Adwaita-dark
     - org.gtk.Gtk3theme.Breeze
@@ -133,5 +141,5 @@ firstboot:
     - org.rncbc.qpwgraph
     - org.signal.Signal
     - org.videolan.VLC
-    - rest.insomnia.Insomnia
+#    - rest.insomnia.Insomnia
     - com.mattjakeman.ExtensionManager
