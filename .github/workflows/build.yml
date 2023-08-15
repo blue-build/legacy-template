@@ -82,18 +82,13 @@ jobs:
           # Have tags for tracking builds during pull request
           SHA_SHORT="${GITHUB_SHA::7}"
 
-          # Don't add malformed tags if $MAJOR_VERSION is empty (base-image didn't include proper labels)
-          if [[ ! -z "$MAJOR_VERSION" ]]; then
-            COMMIT_TAGS+=("pr-${{ github.event.number }}-${MAJOR_VERSION}")
-            COMMIT_TAGS+=("${SHA_SHORT}-${MAJOR_VERSION}")
+          # Using clever bash string templating, https://stackoverflow.com/q/40771781
+          # don't make malformed tags if $MAJOR_VERSION is empty (base-image didn't include proper labels) --
+          COMMIT_TAGS+=("pr-${{ github.event.number }}${MAJOR_VERSION:+-$MAJOR_VERSION}")
+          COMMIT_TAGS+=("${SHA_SHORT}${MAJOR_VERSION:+-$MAJOR_VERSION}")
 
-            BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
-          else
-            COMMIT_TAGS+=("pr-${{ github.event.number }}")
-            COMMIT_TAGS+=("${SHA_SHORT}-")
-
-            BUILD_TAGS=("${TIMESTAMP}")
-          fi
+          BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION:+$MAJOR_VERSION-}${TIMESTAMP}")
+          # --
 
           BUILD_TAGS+=("${TIMESTAMP}")
           BUILD_TAGS+=("latest")
