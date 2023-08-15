@@ -76,7 +76,7 @@ jobs:
         run: |
           # Generate a timestamp for creating an image version history
           TIMESTAMP="$(date +%Y%m%d)"
-          MAJOR_VERSION="$(echo ${{ steps.labels.outputs.VERSION }} | cut -d . -f 1)"
+          MAJOR_VERSION="${{ env.FEDORA_MAJOR_VERSION }}"
           COMMIT_TAGS=()
           BUILD_TAGS=()
           # Have tags for tracking builds during pull request
