@@ -1,4 +1,4 @@
-# [`rpm-ostree`](https://coreos.github.io/rpm-ostree/) module for startingpoint
+# [`rpm-ostree`](https://coreos.github.io/rpm-ostree/) Module for Startingpoint
 
 The `rpm-ostree` module offers pseudo-declarative package and repository management using `rpm-ostree`.
 
@@ -8,7 +8,8 @@ Then the module installs the packages declared under `install:` using `rpm-ostre
 
 Additionally, the `rpm-ostree` module supports a temporary (waiting for `rpm-ostree` issue [#233](https://github.com/coreos/rpm-ostree/issues/233)) fix for packages that install into `/opt/`. Installation for packages that install into folder names declared under `optfix:` are fixed using some symlinks.
  
-Example configuration:
+## Example Configuration:
+
 ```yml
 type: rpm-ostree
 repos: 

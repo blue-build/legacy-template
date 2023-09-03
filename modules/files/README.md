@@ -1,16 +1,17 @@
-# `files` module for startingpoint
+# `files` Module for startingpoint
 
-The files module simplifies copying files to the image at build time. These files are located in the `config/files` directory (`/tmp/config/files` inside of the image)
+The `files` module simplifies the process of copying files to the image during the build time. These files are sourced from the `config/files` directory, which is located at `/tmp/config/files` inside the image.
 
-Note: If you need to place anything in the `/etc` directory of the final image, it must be placed in `/usr/etc` within your repository. This ensures they are written to `/usr/etc` on the final system. `/usr/etc` is the appropriate directory for system configuration templates on immutable Fedora distros. The normal `/etc` directory is solely for manual overrides and editing by the machine's admin after installation. For more details, refer to issue [#28](https://github.com/ublue-os/startingpoint/issues/28).
+> **Note**
+> If you need to place any files in the `/etc` directory of the final image, it's crucial to place them within the `/usr/etc` directory in your image. In immutable Fedora distributions, `/usr/etc` is the appropriate directory for storing system configuration templates. The conventional `/etc` directory is reserved solely for manual overrides and edits by the machine's administrator after installation. For further information, please refer to [issue #28](https://github.com/ublue-os/startingpoint/issues/28).
 
-Example configuration:
+## Example Configuration:
 
 ```yaml
 type: files
 files:
   usr: /usr
 ```
-In this example, the `usr` represents the file or directory inside the config/files directory, and `/usr` represents the corresponding location on the image.
 
+In the example above, `usr` represents the file or directory located inside the `config/files` directory, while `/usr` designates the corresponding destination within the image. This simple configuration allows for seamless file copying and placement during image creation.
 
