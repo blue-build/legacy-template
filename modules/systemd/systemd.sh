@@ -10,22 +10,22 @@ get_yaml_array USER_DISABLED '.user.disabled[]' "$1"
 
 
 if [[ ${#ENABLED[@]} -gt 0 ]]; then
-    for service in "${ENABLED[@]}"; do
-        systemctl enable $service
+    for unit in "${ENABLED[@]}"; do
+        systemctl enable "$unit"
     done
 fi
 if [[ ${#DISABLED[@]} -gt 0 ]]; then
-    for service in "${DISABLED[@]}"; do
-        systemctl disable $service
+    for unit in "${DISABLED[@]}"; do
+        systemctl disable "$unit"
     done
 fi
 if [[ ${#USER_ENABLED[@]} -gt 0 ]]; then
-    for service in "${ENABLED[@]}"; do
-        systemctl --user enable $service
+    for unit in "${ENABLED[@]}"; do
+        systemctl --user enable "$unit"
     done
 fi
 if [[ ${#USER_DISABLED[@]} -gt 0 ]]; then
-    for service in "${DISABLED[@]}"; do
-        systemctl --user disable $service
+    for unit in "${DISABLED[@]}"; do
+        systemctl --user disable "$unit"
     done
 fi
