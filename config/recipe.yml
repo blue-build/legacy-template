@@ -50,13 +50,21 @@ modules:
       - Celluloid: io.github.celluloid_player.Celluloid
       - Krita: org.kde.krita
 
-  - type: systemd
-    system:
-      enabled:
-        - power-profiles-daemon
-        - gdm
-      disabled:
-        - rpm-ostree-countme.timer
+  # - type: systemd
+  #  system:
+  #    enabled:
+  #      - example.service
+  #      - example.timer
+  #    disabled:
+  #      - example.service
+  #      - example.timer
+  #  user:
+  #    enabled:
+  #      - example.service
+  #      - example.timer
+  #    disabled:
+  #      - example.service
+  #      - example.timer
 
   - type: script
     scripts:
