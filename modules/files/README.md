@@ -13,5 +13,5 @@ files:
   usr: /usr
 ```
 
-In the example above, `usr` represents the file or directory located inside the `config/files` directory, while `/usr` designates the corresponding destination within the image. This simple configuration allows for seamless file copying and placement during image creation.
+In the example above, `usr` represents the directory located inside the `config/files` in the repository, while `/usr` designates the corresponding destination within the image.
 
