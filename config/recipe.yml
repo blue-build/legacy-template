@@ -53,12 +53,10 @@ modules:
   - type: systemd
     system:
       enabled:
-        - flatpak-system-update.timer
+        - power-profiles-daemon
+        - gdm
       disabled:
         - rpm-ostree-countme.timer
-    user:
-      enabled:
-        - flatpak-user-update.timer
 
   - type: script
     scripts:
