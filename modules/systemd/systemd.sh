@@ -11,25 +11,25 @@ get_yaml_array USER_DISABLED '.user.disabled[]' "$1"
 
 if [[ ${#ENABLED[@]} -gt 0 ]]; then
     for unit in "${ENABLED[@]}"; do
-        unit=$(systemd-escape "$unit")
-        systemctl enable "$unit"
+        unit=$(printf "$unit")
+        systemctl enable $unit
     done
 fi
 if [[ ${#DISABLED[@]} -gt 0 ]]; then
     for unit in "${DISABLED[@]}"; do
-        unit=$(systemd-escape "$unit")
-        systemctl disable "$unit"
+        unit=$(printf "$unit")
+        systemctl disable $unit
     done
 fi
 if [[ ${#USER_ENABLED[@]} -gt 0 ]]; then
     for unit in "${ENABLED[@]}"; do
-        unit=$(systemd-escape "$unit")
-        systemctl --user enable "$unit"
+        unit=$(printf "$unit")
+        systemctl --user enable $unit
     done
 fi
 if [[ ${#USER_DISABLED[@]} -gt 0 ]]; then
     for unit in "${DISABLED[@]}"; do
-        unit=$(systemd-escape "$unit")
-        systemctl --user disable "$unit"
+        unit=$(printf "$unit")
+        systemctl --user disable $unit
     done
 fi
