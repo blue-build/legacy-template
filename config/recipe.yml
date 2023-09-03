@@ -43,7 +43,7 @@ modules:
       - Celluloid: io.github.celluloid_player.Celluloid
       - Krita: org.kde.krita
 
-   - type: systemd
+  - type: systemd
     system:
       enabled:
         - flatpak-system-update.timer
