@@ -39,5 +39,3 @@ systemctl disable example.target
 systemctl --user enable example.timer
 systemctl --user disable example.service
 ```
-
-With this module, you have precise control over systemd unit activation during image building.
