@@ -27,12 +27,12 @@ For a comprehensive list of modules, their in-depth documentation and example co
 To build multiple images, you need to create another recipe.yml file, which you should name based on what kind of image you want it to build. Then, edit the [`build.yml`](../.github/workflows/build.yml) file. Inside the file, under `jobs: strategy: matrix:`, there's a list of recipe files to build images, which you need to add your new recipe file to. These should be paths to files inside the `config` directory.
 
 Module configuration can be included from other files using the `from-file` syntax. The value should be a path to a file inside the `config` directory. For example, the following snippet could be used to include the configuration for installing a set of packages common to multiple images.
-```yml
+```yaml
 modules:
   - from-file: common-packages.yml
 ```
 And inside common-packages.yml
-```yml
+```yaml
 type: rpm-ostree
 install:
   - i3
