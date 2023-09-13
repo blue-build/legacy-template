@@ -4,7 +4,7 @@ name: KixO
 description: A custom Fedora rpm-ostree image OS build using ublue
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: quay.io/fedora-ostree-desktops/base:38
 image-version: 38 # latest is also supported if you want new updates ASAP
 
 modules:
