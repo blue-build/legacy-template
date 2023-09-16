@@ -21,12 +21,23 @@ modules:
 
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
+      - kernel-cachyos-bore-eevdf
+      - libcap-ng-devel 
+      - procps-ng-devel
+      - uksmd
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - kernel 
+      - kernel-core 
+      - kernel-modules 
+      - kernel-modules-core 
+      - kernel-modules-extra
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -54,3 +65,7 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+  - type: systemd
+    system:
+      enabled:
+      - uksmd.service
