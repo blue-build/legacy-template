@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: asyrafng/Kluenoite
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: kluenoite
