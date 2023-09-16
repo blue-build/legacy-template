@@ -38,6 +38,11 @@ modules:
       - kernel-modules 
       - kernel-modules-core 
       - kernel-modules-extra
+      - kernel-devel-matched
+      - kmod-openrazer
+      - kernel-uki-virt
+      - kernel-modules-core-uname-r
+      - kernel-uname-r
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
