@@ -36,8 +36,8 @@ modules:
         # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
-      # - dconf-update-service # a service unit that updates the dconf db on boot
+      - ublue-update # https://github.com/ublue-os/ublue-update
+       - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
 
 
@@ -46,8 +46,9 @@ modules:
       #  will be installed and set up
     custom-flatpaks:
       # this section is optional
-      # - Celluloid: io.github.celluloid_player.Celluloid
-      # - Krita: org.kde.krita
+      - Floorp: one.ablaze.floorp
+      - Krita: org.kde.krita
+      - SaveDesktop: io.github.vikdevelop.SaveDesktop
 
   - type: script
     scripts:
