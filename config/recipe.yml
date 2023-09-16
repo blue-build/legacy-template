@@ -26,21 +26,11 @@ modules:
     install:
       # - micro
       # - starship
-      - kernel-cachyos-bore-eevdf
       - libcap-ng-devel 
       - procps-ng-devel
-      - uksmd
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - kernel 
-      - kernel-core 
-      - kernel-modules 
-      - kernel-modules-core 
-      - kernel-modules-extra
-      - kernel-devel-matched
-      - kernel-modules-core-uname-r
-      - kernel-uname-r
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -68,7 +58,3 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-  - type: systemd
-    system:
-      enabled:
-      - uksmd.service
