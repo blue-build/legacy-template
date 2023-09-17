@@ -68,7 +68,7 @@ screens:
       groups:
         Core GNOME Apps:
           description: Core system applications for the GNOME desktop environment.
-          default: false
+          default: true
           packages:
             - Calculator: org.gnome.Calculator
             - Calendar: org.gnome.Calendar
@@ -88,14 +88,15 @@ screens:
             - Photos (Organizer): org.gnome.Photos
             - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
             - Text Editor: org.gnome.TextEditor
-            - Videos (Player): org.gnome.Totem
+            - Todo: org.gnome.Todo
+            # - Videos (Player): org.gnome.Totem
             - Weather: org.gnome.Weather
         System Apps:
           description: System applications for all desktop environments.
           default: true
           packages:
             # - Deja Dup Backups: org.gnome.DejaDup
-            # - Fedora Media Writer: org.fedoraproject.MediaWriter
+            - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
             - Flatsweep: io.github.giantpinkrobots.flatsweep
             # - Font Downloader: org.gustavoperedo.FontDownloader
@@ -153,7 +154,7 @@ screens:
           description: Tools for software development
           default: true
           packages:
-            - VSCode: com.visualstudio.code
+            # - VSCode: com.visualstudio.code
             - DBeaver Community: io.dbeaver.DBeaverCommunity
             # - Android Studio: com.google.AndroidStudio
         Media:

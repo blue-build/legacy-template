@@ -28,17 +28,16 @@ modules:
       - langpacks-nl # Dutch language packs (systemwide)
       - langpacks-en_GB # British language packs (systemwide)
       # Gnome apps
-      - gnome-todo # Todo app (syncs with Nextcloud)
       - gnome-shell-extension-gsconnect # GS connect for KDE connect
-      - webextension-gsconnect
+      # - webextension-gsconnect
       - nautilus-gsconnect
       # Battery
       - tlp
       - tlp-rdw
       
     remove:
-      # - firefox # default firefox removed in favor of flatpak
-      # - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - firefox # default firefox removed in favor of flatpak
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -62,5 +61,7 @@ modules:
     scripts:
       - install-chezmoi.sh
       - install-ms-fonts.sh
+      - install-mullvad-vpn.sh
+      - install-vscode.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh

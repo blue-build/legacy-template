@@ -5,7 +5,6 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# https://techviewleo.com/install-wezterm-on-fedora-opensuse/?expand_article=1
-VER=$(curl -s https://api.github.com/repos/twpayne/chezmoi/releases/latest|grep tag_name|cut -d '"' -f 4)
-VER2=$(echo "$VER" | sed -r 's/v//g')
-rpm-ostree install https://github.com/twpayne/chezmoi/releases/download/${VER}/chezmoi-${VER2}-x86_64.rpm
+wget --content-disposition https://mullvad.net/download/app/rpm/latest
+rpm-ostree install MullvadVPN-*.rpm
+rm -f MullvadVPN-*.rpm
