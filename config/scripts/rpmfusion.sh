@@ -9,3 +9,7 @@ wget -P /tmp/rpms \
 rpm-ostree install \
     /tmp/rpms/*.rpm \
     fedora-repos-archive
+
+rpm-ostree install \
+    ffmpeg ffmpeg-libs ffmpegthumbnailer intel-media-driver libva-intel-driver \
+    mesa-va-drivers-freeworld pipewire-codec-aptx
