@@ -48,7 +48,6 @@ modules:
       - google-noto-sans-javanese-fonts
       - google-noto-sans-balinese-fonts
       - google-noto-sans-sundanese-fonts
-      - google-noto-sans-cjk-fonts
       - nvtop
       - openssl
       - podman-compose
