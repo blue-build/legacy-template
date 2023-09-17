@@ -18,7 +18,7 @@ FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 # so that `podman build` should just work for most people.
 ARG RECIPE=recipe.yml 
 # The default image registry to write to policy.json and cosign.yaml
-ARG IMAGE_REGISTRY=ghcr.io/ublue-os
+ARG IMAGE_REGISTRY=quay.io/fedora-ostree-desktops/kinoite
 
 
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
