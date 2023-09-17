@@ -74,15 +74,6 @@ modules:
       - kernel-modules-core 
       - kernel-modules-extra
       # remove packages like Ublue
-      - libavcodec-free
-      - libavfilter-free
-      - libavformat-free
-      - libavutil-free
-      - libpostproc-free
-      - libswresample-free
-      - libswscale-free
-      - mesa-va-drivers
-      - google-noto-sans-cjk-vf-fonts
       - plasma-discover-rpm-ostree
 
   - type: bling # configure what to pull in from ublue-os/bling
