@@ -14,8 +14,8 @@ sleep 2
 # an initramfs.
 ### COMMENT OUT BELOW LINE IF USING LOCALLY ###
 rpm-ostree cliwrap install-to-root / && \
-rpm-ostree override remove $INSTALLED_KERNEL_PACKAGES --install=kernel-cachyos-bore-eevdf
+# rpm-ostree override remove $INSTALLED_KERNEL_PACKAGES --install=kernel-cachyos-bore-eevdf
 # rpm-ostree override remove $INSTALLED_KERNEL_PACKAGES --install=kernel-specified
-# rpm-ostree override replace "URL/kernel-name.rpm"
+rpm-ostree override replace "https://download.copr.fedorainfracloud.org/results/bieszczaders/kernel-cachyos/fedora-38-x86_64/06407061-kernel-cachyos-bore-eevdf/kernel-cachyos-bore-eevdf-6.5.3-cbe3.0.fc38.x86_64.rpm"
 
 # Credit https://github.com/JosSamLoh/replace-kernel/blob/live/scripts/replace-kernel-easy.sh
