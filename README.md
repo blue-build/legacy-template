@@ -1,5 +1,14 @@
 # Kluenoite
+Vanilla Fedora Kinoite 38 based OCI images with Universal Blue like modification and CachyOS Kernel and Addons.
 
+Whats changed from Universal Blue Startingpoint :
+- Changed based image to vanilla Kinoite
+- removed kmods
+- removed/add some packages
+
+This is considered a personal use image. Try it in a VM to see if it suits you. Or try making your own!
+
+## Universal Blue Documentation
 > **Warning**
 > Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
 > There are breaking changes between this and the previous version.
