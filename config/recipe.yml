@@ -63,5 +63,6 @@ modules:
       - install-ms-fonts.sh
       # - install-mullvad-vpn.sh
       # - install-vscode.sh
+      - install-appimagelauncher.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh

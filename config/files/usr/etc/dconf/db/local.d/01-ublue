@@ -1,8 +1,15 @@
+[org/bluetooth/power]
+bluetooth-enabled=false
+
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 enable-hot-corners=false
+text-scaling-factor=1.4
 clock-show-weekday=true
 show-battery-percentage=true
+
+[org/gnome/desktop/interface/clock]
+automatic-timezone=true
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
@@ -42,19 +49,19 @@ remember-numlock-state=true
 show-weekdate=true
 
 [org/gnome/desktop/wm/keybindings]
-switch-applications="['<Alt>Tab', '<Shift><Alt>Tab']"
-switch-to-workspace-left="['<Control><Super>Left']"
-switch-to-workspace-right="['<Control><Super>Right']"
-switch-windows="['<Super>Tab']"
-switch-windows-backward="['<Shift><Super>Tab']"
+switch-applications=['<Alt>Tab', '<Shift><Alt>Tab']
+switch-to-workspace-left=['<Control><Super>Left']
+switch-to-workspace-right=['<Control><Super>Right']
+switch-windows=['<Super>Tab']
+switch-windows-backward=['<Shift><Super>Tab']
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings="['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-name='gnome-terminal'
-command='gnome-terminal'
 binding='<Control><Alt>t'
+command='gnome-terminal'
+name='Launch Terminal'
 
 [org/gnome/desktop/privacy]
 old-files-age='uint32 30'
@@ -63,6 +70,9 @@ report-technical-problems=false
 send-software-usage-stats=false
 remove-old-temp-files=true
 remove-old-trash-files=true
+
+[org/gnome/power-profiles]
+current-profile='performance'
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
@@ -78,12 +88,15 @@ lock-delay=600
 [org/gnome/system/locale]
 region='nl_NL.UTF-8'
 
+[org/gnome/desktop/locale]
+region='nl_NL.UTF-8'
+
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/tux_and_friends.png'
 picture-uri-dark='file:///usr/share/backgrounds/tux_and_friends.png'
 
 [org/gnome/shell/weather]
-locations="[<(uint32 2, <('Rotterdam', 'EHRD', true, [(0.9066985464110543, 0.077667151713747662)], [(0.90611677581148686, 0.078539816339744828)])>)>]"
+locations=[<(uint32 2, <('Rotterdam', 'EHRD', true, [(0.9066985464110543, 0.077667151713747662)], [(0.90611677581148686, 0.078539816339744828)])>)>]
 
 [org/gnome/TextEditor]
 show-line-numbers=true
