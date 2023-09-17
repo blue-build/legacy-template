@@ -24,24 +24,29 @@ modules:
     install:
       # - micro
       # - starship
+      # System apps
       - langpacks-nl # Dutch language packs (systemwide)
       - langpacks-en_GB # British language packs (systemwide)
+      # Gnome apps
       - gnome-todo # Todo app (syncs with Nextcloud)
       - gnome-shell-extension-gsconnect # GS connect for KDE connect
       - webextension-gsconnect
       - nautilus-gsconnect
+      # Battery
+      - tlp
+      - tlp-rdw
       
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      # - firefox # default firefox removed in favor of flatpak
+      # - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-      - fonts # selection of common good free fonts
+      # - fonts # selection of common good free fonts
       - justfiles # add "!include /usr/share/ublue-os/just/bling.just"
                   # in your custom.just (added by default) or local justfile
-      - nix-installer # shell shortcuts for determinate system's nix installers
-      - ublue-os-wallpapers
+      # - nix-installer # shell shortcuts for determinate system's nix installers
+      # - ublue-os-wallpapers
       # - ublue-update # https://github.com/ublue-os/ublue-update
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
@@ -55,5 +60,7 @@ modules:
 
   - type: script
     scripts:
+      - install-chezmoi.sh
+      - install-ms-fonts.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh

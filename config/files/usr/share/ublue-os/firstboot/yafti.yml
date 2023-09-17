@@ -9,6 +9,19 @@ screens:
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
+    command-drop-down:
+      source: yafti.screen.package
+      values:
+        title: Commands to run
+        show_terminal: true
+        package_manager: yafti.plugin.run
+        groups:
+          Mullvad VPN:
+            description: Install Mullvad VPN? Restart after installing. Dont forget to run `sudo systemctl enable --now mullvad-daemon` after install
+            default: true
+            packages:
+            - Desktop: |
+                wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest; rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm; rm /tmp/rpms/MullvadVPN-*.rpm
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -53,7 +66,6 @@ screens:
         user: false
         system: true
       groups:
-      
         Core GNOME Apps:
           description: Core system applications for the GNOME desktop environment.
           default: false
@@ -78,7 +90,6 @@ screens:
             - Text Editor: org.gnome.TextEditor
             - Videos (Player): org.gnome.Totem
             - Weather: org.gnome.Weather
-            
         System Apps:
           description: System applications for all desktop environments.
           default: true
@@ -86,12 +97,12 @@ screens:
             # - Deja Dup Backups: org.gnome.DejaDup
             # - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+            - Flatsweep: io.github.giantpinkrobots.flatsweep
             # - Font Downloader: org.gustavoperedo.FontDownloader
             # - Mozilla Firefox: org.mozilla.firefox
             - Czkawka: com.github.qarmin.czkawka
             - qBittorrent: org.qbittorrent.qBittorrent
             # - Bleachbit: org.bleachbit.BleachBit
-            
         Web Browsers:
           description: Additional browsers.
           default: true
@@ -103,7 +114,6 @@ screens:
             # - Google Chrome: com.google.Chrome
             # - Microsoft Edge: com.microsoft.Edge
             # - Opera: com.opera.Opera
-            
         Gaming:
           description: "Rock and Stone!"
           default: false
@@ -116,7 +126,6 @@ screens:
             - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
             - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
             - Proton Updater for Steam: net.davidotek.pupgui2
-            
         Communication:
           description: Tools for communication.
           default: true
@@ -126,7 +135,6 @@ screens:
             - Tutanota (Experimental): com.tutanota.Tutanota
             - Signal Desktop: org.signal.Signal
             # - Element: im.riot.Riot
-            
         Office:
           description: Boost your productivity.
           default: true
@@ -141,7 +149,6 @@ screens:
             - Logseq: com.logseq.Logseq
             # - Standard Notes: org.standardnotes.standardnotes
             # - Calibre: com.calibre_ebook.calibre
-            
         Development:
           description: Tools for software development
           default: true
@@ -149,7 +156,6 @@ screens:
             - VSCode: com.visualstudio.code
             - DBeaver Community: io.dbeaver.DBeaverCommunity
             # - Android Studio: com.google.AndroidStudio
-            
         Media:
           description: Tools for playing and editing media (audio, video, images)
           default: true
@@ -160,7 +166,6 @@ screens:
             # - Shortwave: de.haeckerfelix.Shortwave # Internet radio
             # - GIMP: org.gimp.GIMP
             # - OBS Studio: com.obsproject.Studio
-            
         Streaming:
           description: Stream to the Internet.
           default: false
@@ -170,7 +175,6 @@ screens:
             - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
             - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
             - Boatswain for Streamdeck: com.feaneron.Boatswain
-
   final-screen:
     source: yafti.screen.title
     values:
