@@ -1,6 +1,6 @@
 # Starting point
 
-[![build-ublue](https://github.com/Dennis8/ublue-personal/actions/workflows/build.yml/badge.svg)](https://github.com/Dennis8/ublue-personal/actions/workflows/build.yml)
+[![build-ublue](https://github.com/dennis8/ublue-personal/actions/workflows/build.yml/badge.svg)](https://github.com/dennis8/ublue-personal/actions/workflows/build.yml)
 
 This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
@@ -15,7 +15,7 @@ Don't worry, it only requires some basic knowledge about using the terminal and 
 After setup, it is recommended you update this README to describe your custom image.
 
 > **Note**
-> Everywhere in this repository, make sure to replace `Dennis8/ublue-personal` with the details of your own repository. Unless you used [`create-ublue-image`](https://github.com/EinoHR/create-ublue-image), in which case the previous repo identifier should already be your repo's details.
+> Everywhere in this repository, make sure to replace `dennis8/ublue-personal` with the details of your own repository. Unless you used [`create-ublue-image`](https://github.com/EinoHR/create-ublue-image), in which case the previous repo identifier should already be your repo's details.
 
 > **Warning**
 > To start, you *must* create a branch called `live` which is exclusively for your customizations. That is the **only** branch the GitHub workflow will deploy to your container registry. Don't make any changes to the original "template" branch. It should remain untouched. By using this branch structure, you ensure a clear separation between your own "published image" branch, your development branches, and the original upstream "template" branch. Periodically sync and fast-forward the upstream "template" branch to the most recent revision. Then, simply rebase your `live` branch onto the updated template to effortlessly incorporate the latest improvements into your own repository, without the need for any messy, manual "merge commits".
@@ -41,7 +41,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/Dennis8/ublue-personal:latest
+  sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/dennis8/ublue-personal:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -49,7 +49,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/Dennis8/ublue-personal:latest
+  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/dennis8/ublue-personal:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -59,7 +59,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/Dennis8/ublue-personal:20230403
+sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/dennis8/ublue-personal:20230403
 ```
 
 This repository by default also supports signing.

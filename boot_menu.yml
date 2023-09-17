@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: Dennis8/ublue-personal
+  - label: dennis8/ublue-personal
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: ublue-personal
