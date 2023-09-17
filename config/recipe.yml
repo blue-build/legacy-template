@@ -98,9 +98,9 @@ modules:
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
-      # - signing.sh
       - rpmfusion.sh
       - main-post-install.sh
+      - signing.sh
       # - replace_kernel_cachy.sh
   
   - type: systemd
