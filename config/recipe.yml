@@ -61,7 +61,7 @@ modules:
     scripts:
       - install-chezmoi.sh
       - install-ms-fonts.sh
-      - install-mullvad-vpn.sh
+      # - install-mullvad-vpn.sh
       - install-vscode.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
