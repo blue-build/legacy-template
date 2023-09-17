@@ -7,6 +7,7 @@ echo "Setting up container signing in policy.json and cosign.yaml for $IMAGE_NAM
 echo "Registry to write: $IMAGE_REGISTRY"
 
 mkdir -p /usr/etc/pki/containers/
+mkdir -p /usr/etc/containers/
 
 cp /usr/share/ublue-os/cosign.pub /usr/etc/pki/containers/"$IMAGE_NAME".pub
 
