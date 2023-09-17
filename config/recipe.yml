@@ -35,20 +35,15 @@ modules:
       # add ublue packages
       - alsa-firmware 
       - distrobox
-      - ffmpeg
-      - ffmpeg-libs
       - fzf
       - grub2-tools-extra
       - heif-pixbuf-loader
       - htop
-      - intel-media-driver
       - just
       - libheif-tools
       - libratbag-ratbagd
-      - libva-intel-driver
       - libva-utils
       - lshw
-      - mesa-va-drivers-freeworld
       - net-tools
       - google-noto-sans-javanese-fonts
       - google-noto-sans-balinese-fonts
@@ -57,7 +52,6 @@ modules:
       - nvtop
       - openssl
       - podman-compose
-      - pipewire-codec-aptx
       - smartmontools
       - symlinks
       - tcpdump
@@ -71,7 +65,6 @@ modules:
       - kcron
       - kio-admin
       - ksshaskpass
-      - ffmpegthumbnailer
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
