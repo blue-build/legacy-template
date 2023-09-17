@@ -29,7 +29,6 @@ modules:
       # - starship
       - libcap-ng-devel 
       - procps-ng-devel
-      - kernel-cachyos-bore-eevdf
       - uksmd
       - kvantum
       # add ublue packages
@@ -67,11 +66,6 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - kernel 
-      - kernel-core 
-      - kernel-modules 
-      - kernel-modules-core 
-      - kernel-modules-extra
       # remove packages like Ublue
       - plasma-discover-rpm-ostree
 
@@ -100,9 +94,8 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - rpmfusion.sh
       - main-post-install.sh
+      - replace_kernel_cachy.sh
       - signing.sh
-      # - replace_kernel_cachy.sh
-  
   - type: systemd
     system:
       enabled:
