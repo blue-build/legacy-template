@@ -52,39 +52,6 @@ modules:
     custom-flatpaks: # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
-      - Flatseal: com.github.tchx84.Flatseal
-      - Czkawka: com.github.qarmin.czkawka
-      # - Bleachbit: org.bleachbit.BleachBit
-      
-      - Firefox: org.mozilla.firefox
-      - Brave: com.brave.Browser
-      - Mullvad: net.mullvad.MullvadBrowser
-      - Tor Browser: com.github.micahflee.torbrowser-launcher
-      
-      - Tutanota (Experimental): com.tutanota.Tutanota
-      - Signal Desktop: org.signal.Signal
-      # - Element: im.riot.Riot
-      
-      - VSCode: com.visualstudio.code
-      - DBeaver Community: io.dbeaver.DBeaverCommunity
-      # - Android Studio: com.google.AndroidStudio
-      
-      - FreeTube: io.freetubeapp.FreeTube
-      - VLC media player: org.videolan.VLC
-      # - Shortwave: de.haeckerfelix.Shortwave # Internet radio
-      - Losslesscut: no.mifi.losslesscut
-      # - GIMP: org.gimp.GIMP
-      # - OBS Studio: com.obsproject.Studio
-      
-      # - Syncthing: me.kozec.syncthingtk
-      - Nextcloud: com.nextcloud.desktopclient.nextcloud
-      - Cryptomator: org.cryptomator.Cryptomator
-      # - Joplin: net.cozic.joplin_desktop
-      # - Obsidian: md.obsidian.Obsidian
-      - Logseq: com.logseq.Logseq
-      - ONLYOFFICE Desktop Editors: org.onlyoffice.desktopeditors
-      # - Calibre: com.calibre_ebook.calibre
-      - qBittorrent: org.qbittorrent.qBittorrent
 
   - type: script
     scripts:
