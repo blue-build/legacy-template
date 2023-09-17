@@ -82,7 +82,6 @@ modules:
       - kernel-modules-extra
       # remove packages like Ublue
       - libavcodec-free
-      - libavdevice-free
       - libavfilter-free
       - libavformat-free
       - libavutil-free
