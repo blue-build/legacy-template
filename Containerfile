@@ -27,6 +27,7 @@ COPY cosign.pub /usr/share/ublue-os/cosign.pub
 # Feel free to remove these lines if you want to speed up image builds and don't want any bling
 COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
+COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
