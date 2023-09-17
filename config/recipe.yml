@@ -117,6 +117,8 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - rpmfusion.sh
+      - main-post-install.sh
       # - replace_kernel_cachy.sh
   
   - type: systemd
