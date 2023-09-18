@@ -5,6 +5,9 @@ Whats changed from Universal Blue Startingpoint :
 - Changed based image to vanilla Kinoite
 - removed kmods
 - removed/add some packages
+- Change kernel to cachyOS Bore-EEVDF from COPR
+- Add and enable UKSMD from cachyOS addon
+- Add Chili SDDM theme
 
 This is considered a personal use image. Try it in a VM to see if it suits you. Or try making your own!
 
