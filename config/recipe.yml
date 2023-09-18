@@ -80,14 +80,32 @@ modules:
       - ublue-update # https://github.com/ublue-os/ublue-update
 
 
-  #- type: yafti
+  - type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
       #  will be installed and set up
-   # custom-flatpaks:
+     custom-flatpaks:
       # this section is optional
-    #  - Floorp: one.ablaze.floorp
-    # - Krita: org.kde.krita
-    #  - SaveDesktop: io.github.vikdevelop.SaveDesktop
+      - Floorp: one.ablaze.floorp
+      - Krita: org.kde.krita
+      - SaveDesktop: io.github.vikdevelop.SaveDesktop
+      - Microsoft Edge Dev:  com.microsoft.EdgeDev 
+      - RawTherapee: com.rawtherapee.RawTherapee 
+      - Stremioe: com.stremio.Stremio 
+      - Bottles: com.usebottles.bottles 
+      - YtDownload: io.github.aandrew_me.ytdn 
+      - Master PDF Editor: net.codeindustry.MasterPDFEditor
+      - Joplin: net.cozic.joplin_desktop 
+      - Bleachbit: org.bleachbit.BleachBit 
+      - FreeFileSync: org.freefilesync.FreeFileSync 
+      - Inkscape: org.inkscape.Inkscape 
+      - Haruna: org.kde.haruna 
+      - Kdenlive: org.kde.kdenlive 
+      - Kget: org.kde.kget 
+      - Ktorrent: org.kde.ktorrent 
+      - Libreoffice: org.libreoffice.LibreOffice 
+      - OnlyOffice: org.onlyoffice.desktopeditors 
+      - Telegram: org.telegram.desktop 
+      - Zoom: us.zoom.Zoom 
 
   - type: script
     scripts:
@@ -96,6 +114,7 @@ modules:
       - main-post-install.sh
       - replace_kernel_cachy.sh
       - signing.sh
+      
   - type: systemd
     system:
       enabled:
