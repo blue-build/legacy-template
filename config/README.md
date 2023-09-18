@@ -31,7 +31,7 @@ Module configuration can be included from other files using the `from-file` synt
 modules:
   - from-file: common-packages.yml
 ```
-And inside common-packages.yml
+And inside config/common-packages.yml
 ```yaml
 type: rpm-ostree
 install:
