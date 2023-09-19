@@ -1,43 +1,133 @@
-# gidrov-os
+# Gidrov OS
 
-> **Warning**
-> Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
-> There are breaking changes between this and the previous version.
-> If you are merging changes from the previous (v0) version, please refer to [the heads-up blog post](https://universal-blue.org/blog/2023/09/02/startingpoint-rewrite-heads-up-what-you-need-to-know/).
+My lightly customized image, based on Fedora Silverblue, main edition, derived from UniversalBlue project.
 
-[![build-ublue](https://github.com/fiftydinar/gidrov-os/actions/workflows/build.yml/badge.svg)](https://github.com/fiftydinar/gidrov-os/actions/workflows/build.yml)
+Removed packages (RPMs), which I consider a bloat:
+- Firefox
+- htop
+- nvtop
+- Gnome Software (not in the best state right now)
+- Gnome classic session
+- Gnome Tour
+- Gnome System Monitor
+- Gnome system extensions
+- Gnome Tweaks
 
-This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
+Replaced packages (RPMs)/usecases:
+- Ungoogled Chromium from Flathub instead of Firefox rpm
+- Flathub web shortcut from Ungoogled Chromium instead of Gnome Software for browsing & installing flatpaks
+- Mission Center from Flathub instead of Gnome System Monitor
 
-For more info, check out the [uBlue homepage](https://universal-blue.org/) and the [main uBlue repo](https://github.com/ublue-os/main/)
+Installed packages (RPMs):
+- Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
 
-## Getting started
+Added extensions:
+- Blur My Shell
+- OpenWeather
+- Caffeine
 
-See the [Make Your Own-page in the documentation](https://universal-blue.org/tinker/make-your-own/) for quick setup instructions for setting up your own repository based on this template.
+Note: Flatpaks below are not separated in the system + user remote. This will maybe get implemented in the future.
 
-Don't worry, it only requires some basic knowledge about using the terminal and git.
+System(ish) flatpaks (what I consider a must out-of-the-box):
+- Flatseal
+- Easy Effects
+- Gnome Image Viewer (Loupe)
+- Gnome Snapshot
+- Gnome Document Viewer
+- Extension Manager
+- Gnome Text Editor
+- Sticky Notes
+- Secrets
+- Gradience
+- Gnome Calculator
+- Gnome Calendar
+- Gnome Maps
+- Gnome Boxes
+- Gnome Clocks
+- LibreOffice
+- G4Music
+- Clapper
+- Bottles
 
-After setup, it is recommended you update this README to describe your custom image.
+User flatpaks:
+- Dialect
+- Telegram Desktop
+- Discord
+- Rnote
+- Fragments
+- FreeTube
+- ASCII Draw
+- Mousai
+- NewsFlash
+- Tagger
+- Parabolic
+- Nicotine+
+- Tenacity
+- Thunderbird
+- GitHub Desktop
+- PCSX2
+- Space Cadet Pinball
+- Grapejuice
+- ProtonPlus
 
-> **Note**
-> Everywhere in this repository, make sure to replace `fiftydinar/gidrov-os` with the details of your own repository. Unless you used one of the automatic repository setup tools in which case the previous repo identifier should already be your repo's details.
+Settings applied by default:
+- Close button from windows removed (because I mapped close button to special mouse key)
+- Set font hinting to "None"
+- Enable "Remove Old Trash files automatically" in Nautilus
+- Set mouse acceleration to flat
+- Set Nokia Pure Text font as default 
+- Set BlurMyShell sigma value to 12, as default value is too strong & looks cheap imo
+- Set OpenWeather to top right, set condition to show on top bar, set arrows for wind direction & use mbar for pressure
 
-> **Warning**
-> To start, you *must* create a branch called `live` which is exclusively for your customizations. That is the **only** branch the GitHub workflow will deploy to your container registry. Don't make any changes to the original "template" branch. It should remain untouched. By using this branch structure, you ensure a clear separation between your own "published image" branch, your development branches, and the original upstream "template" branch. Periodically sync and fast-forward the upstream "template" branch to the most recent revision. Then, simply rebase your `live` branch onto the updated template to effortlessly incorporate the latest improvements into your own repository, without the need for any messy, manual "merge commits".
+Additional configuration:
+- OBS distrobox, hide/unhide grub justfile
+- bling justfile (which I would remove, but just command won't work without it)
 
-## Customization
+## Post-Setup
+- Install OBS distrobox container
+  ```
+  just install-obs-studio-portable
+  ```
+- Install Bazzite-arch distrobox container, which includes Steam & Lutris for gaming + AdwSteamGTK skin (enter commands one by one)
+  ```
+  just distrobox-bazzite
+  distrobox-enter -n bazzite-arch -- '  distrobox-export --app steam'
+  distrobox-enter -n bazzite-arch -- '  distrobox-export --app lutris'
+  distrobox-enter -n bazzite-arch -- '  paru -S adwsteamgtk --noconfirm'
+  distrobox-enter -n bazzite-arch -- '  distrobox-export --app AdwSteamGtk'
+  ```
+- Hide GRUB
+  ```
+  just hide-grub
+  ```
 
-The easiest way to start customizing is by looking at and modifying `config/recipe.yml`. It's documented using comments and should be pretty easy to understand.
+## Post-Setup which will get integrated into the image
+Install & enable selected extensions in Extension Manager:
+- Quick Close in Overview
+- Rounded Window Corners
+- GTK3 Theme Switcher
 
-If you want to add custom configuration files, you can just add them in the `/usr/etc/` directory, which is the official OSTree "configuration template" directory and will be applied to `/etc/` on boot. `config/files/usr` is copied into your image's `/usr` by default. If you need to add other directories in the root of your image, that can be done using the `files` module. Writing to `/var/` in the image builds of OSTree-based distros isn't supported and will not work, as that is a local user-managed directory!
+Than apply "Enable Nautilus "Sort folders before files"" manually in Nautilus settings. (manually because command doesn't work right now)
 
-For more information about customization, see [the README in the config directory](config/README.md)
+Config changes (one-liner command):
+- Add Nautilus "New Document" to context menu
+- Set light & dark theme to AdwGtk3
+- Set keyboard delay to be much faster, as Gnome defaults are too slow
+- "Window not responding" dialog extended to 20s
 
-Documentation around making custom images exists / should be written in two separate places:
-* [The Tinkerer's Guide on the website](https://universal-blue.org/tinker/make-your-own/) for general documentation around making custom images, best practices, tutorials, and so on.
-* Inside this repository for documentation specific to the ins and outs of the template (like module documentation), and just some essential guidance on how to make custom images.
+Run this command after install until I implement this into the image:
+  ```
+touch ~/Templates/Untitled\ Document && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher light adw-gtk3 && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher dark adw-gtk3-dark && gsettings set org.gnome.desktop.peripherals.keyboard delay 226 && gsettings set org.gnome.mutter check-alive-timeout 20000
+  ```
 
-## Installation
+## Installation (ISO) [Recommended]
+
+ISOs are online-based & are constantly upgraded. There is no need to worry about the version & the date of the ISO.
+Just download, install & enjoy!
+
+Available for download in Releases page.
+
+## Installation (Rebase)
 
 > **Warning**
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
@@ -66,33 +156,3 @@ This repository builds date tags as well, so if you want to rebase to a particul
 ```
 sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/fiftydinar/gidrov-os:20230403
 ```
-
-This repository by default also supports signing.
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
-## ISO
-
-This template includes a simple Github Action to build and release an ISO of your image. 
-
-To run the action, simply edit the `boot_menu.yml` by changing all the references to startingpoint to your repository. This should trigger the action automatically.
-
-The Action uses [isogenerator](https://github.com/ublue-os/isogenerator) and works in a similar manner to the official Universal Blue ISO. If you have any issues, you should first check [the documentation page on installation](https://universal-blue.org/installation/). The ISO is a netinstaller and should always pull the latest version of your image.
-
-Note that this release-iso action is not a replacement for a full-blown release automation like [release-please](https://github.com/googleapis/release-please).
-
-## `just`
-
-The [`just`](https://just.systems/) command runner is included in all `ublue-os/main`-derived images.
-
-You need to have a `~/.justfile` with the following contents and `just` aliased to `just --unstable` (default in posix-compatible shells on ublue) to get started with just locally.
-```
-!include /usr/share/ublue-os/just/main.just
-!include /usr/share/ublue-os/just/nvidia.just
-!include /usr/share/ublue-os/just/custom.just
-```
-Then type `just` to list the just recipes available.
-
-The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just commands (recipes) you wish to include in your image. By default, it includes the justfiles from [`ublue-os/bling`](https://github.com/ublue-os/bling), if you wish to disable that, you need to just remove the line that includes bling.just.
-
-See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.

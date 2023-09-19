@@ -1,0 +1,26 @@
+[org/gnome/desktop/interface]
+font-hinting='none'
+font-name='Nokia Pure Text 11'
+document-font-name='Nokia Pure Text 11'
+
+[org/gnome/desktop/wm/preferences]
+title-bar-font='Nokia Pure Text Bold 11'
+button-layout='appmenu:'
+
+[org/gnome/desktop/privacy]
+remove-old-trash-files=true
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+
+[org/gnome/shell]
+enabled-extensions=['openweather-extension@jenslody.de', 'caffeine@patapon.info', 'blur-my-shell@aunetx']
+
+[org/gnome/shell/extensions/blur-my-shell]
+sigma=12
+
+[org/gnome/shell/extensions/openweather]
+position-in-panel='right'
+show-comment-in-panel=true
+wind-direction=true
+pressure-unit='mbar'

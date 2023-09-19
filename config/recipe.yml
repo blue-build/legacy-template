@@ -5,7 +5,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 38 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -26,20 +26,36 @@ modules:
     install:
       # - micro
       # - starship
+         - gnome-shell-extension-caffeine
+         - gnome-shell-extension-openweather
+         - gnome-shell-extension-blur-my-shell      
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-
+      - htop
+      - nvtop
+      - gnome-software
+      - gnome-software-rpm-ostree
+      - gnome-tour
+      - gnome-system-monitor
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
+      - gnome-classic-session
+      - gnome-tweaks
+      
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-      - fonts # selection of common good free fonts
+      # - fonts # selection of common good free fonts
       - justfiles
         # add "!include /usr/share/ublue-os/just/bling.just"
         # in your custom.just (added by default) or local justfile
-      - nix-installer # shell shortcuts for determinate system's nix installers
-      - ublue-os-wallpapers
+      # - nix-installer # shell shortcuts for determinate system's nix installers
+      # - ublue-os-wallpapers
       # - ublue-update # https://github.com/ublue-os/ublue-update
-      # - dconf-update-service # a service unit that updates the dconf db on boot
+      - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
 
 
@@ -50,8 +66,49 @@ modules:
       # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
-
+         - Dialect: app.drey.Dialect
+         - Telegram Desktop: org.telegram.desktop
+         - Discord: com.discordapp.Discord
+         - Gradience: com.github.GradienceTeam.Gradience
+         - Rnote: com.github.flxzt.rnote
+         - G4Music: com.github.neithern.g4music
+         - Clapper: com.github.rafostar.Clapper
+         - Flatseal: com.github.tchx84.Flatseal
+         - Easy Effects: com.github.wwmm.easyeffects
+         - Bottles: com.usebottles.bottles
+         - Fragments: de.haeckerfelix.Fragments
+         - FreeTube: io.freetubeapp.FreeTube
+         - ASCII Draw: io.github.nokse22.asciidraw
+         - Mousai: io.github.seadve.Mousai
+         - NewsFlash: io.gitlab.news_flash.NewsFlash
+         - Mission Center: io.missioncenter.MissionCenter
+         - Boxes: org.gnome.Boxes
+         - Calculator: org.gnome.Calculator
+         - Calendar: org.gnome.Calendar
+         - Ungoogled Chromium: com.github.Eloston.UngoogledChromium
+         - Image Viewer: org.gnome.Loupe
+         - Maps: org.gnome.Maps
+         - Snapshot: org.gnome.Snapshot
+         - Text Editor: org.gnome.TextEditor
+         - Secrets: org.gnome.World.Secrets
+         - Clocks: org.gnome.clocks
+         - LibreOffice: org.libreoffice.LibreOffice
+         - Tagger: org.nickvision.tagger
+         - Parabolic: org.nickvision.tubeconverter
+         - Nicotine+: org.nicotine_plus.Nicotine
+         - Tenacity: org.tenacityaudio.Tenacity
+         - Sticky Notes: com.vixalien.sticky
+         - Document Viewer: org.gnome.Evince
+         - Thunderbird: org.mozilla.Thunderbird
+         - GitHub Desktop: io.github.shiftey.Desktop
+         - PCSX2: net.pcsx2.PCSX2
+         - Space Cadet Pinball: com.github.k4zmu2a.spacecadetpinball
+         - Grapejuice: net.brinkervii.grapejuice
+         - ProtonPlus: com.vysp3r.ProtonPlus
+         - Extension Manager: com.mattjakeman.ExtensionManager
+         
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - reload-font-cache.sh      
