@@ -73,6 +73,7 @@ User flatpaks:
 - ProtonPlus
 
 Settings applied by default:
+- BBR TCP congestion algorithm & FQ network packet scheduling (for better network performance, especially in low-signal situations)
 - Close button from windows removed (because I mapped the close button to special mouse key)
 - Set font hinting to "None"
 - Enable "Remove Old Trash files automatically" in Nautilus
