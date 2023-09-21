@@ -73,7 +73,6 @@ User flatpaks:
 - ProtonPlus
 
 Settings applied by default:
-- Gnome's compositor Mutter patched with triple buffering patch (results in improved Gnome-Shell performance)
 - BBR TCP congestion algorithm & FQ network packet scheduling (for better network performance, especially in low-signal situations)
 - Close button from windows removed (because I mapped the close button to special mouse key)
 - Set font hinting to "None"
