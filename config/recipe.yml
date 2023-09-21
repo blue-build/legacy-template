@@ -24,7 +24,6 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
         - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
-        - https://copr.fedorainfracloud.org/coprs/nxmbit/gnome-perf-patched/repo/fedora-%OS_VERSION%/nxmbit-gnome-perf-patched-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
@@ -51,13 +50,7 @@ modules:
       - gnome-shell-extension-window-list
       - gnome-classic-session
       - gnome-tweaks
-     replace:
-     - mutter
-     author:
-     - nxmbit
-     reponame:
-     - gnome-perf-patched
-     
+      
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       # - fonts # selection of common good free fonts
