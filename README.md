@@ -19,9 +19,9 @@ Replaced packages (RPMs)/usecases:
 - Mission Center from Flathub instead of Gnome System Monitor
 
 Installed packages (RPMs):
-- Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
 - System76 Scheduler (for performance improvement by adequately adjusting process priorities in realtime)
 - DDC Control (for setting up screen controls through GUI in OS)
+- Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
 
 Added extensions:
 - Blur My Shell
