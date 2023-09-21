@@ -31,6 +31,9 @@ modules:
          - gnome-shell-extension-openweather
          - gnome-shell-extension-blur-my-shell
          - gnome-shell-extension-system76-scheduler
+         - ddccontrol-gtk
+         - ddccontrol-db
+         - ddccontrol
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
