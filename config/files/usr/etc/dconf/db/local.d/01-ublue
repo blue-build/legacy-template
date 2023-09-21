@@ -4,7 +4,7 @@ bluetooth-enabled=false
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 enable-hot-corners=false
-text-scaling-factor=1.4
+text-scaling-factor=1.5
 clock-show-weekday=true
 show-battery-percentage=true
 
