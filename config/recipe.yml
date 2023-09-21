@@ -24,6 +24,7 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
         - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
+        - https://copr.fedorainfracloud.org/coprs/nxmbit/gnome-perf-patched/repo/fedora-%OS_VERSION%/nxmbit-gnome-perf-patched-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
@@ -117,3 +118,4 @@ modules:
       - signing.sh
       - reload-font-cache.sh
       - enable-system76-scheduler-service.sh
+      - replace-mutter-with-triple-buffer-patch.sh
