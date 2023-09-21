@@ -21,7 +21,7 @@ Replaced packages (RPMs)/usecases:
 Installed packages (RPMs):
 - Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
 - System76 Scheduler (for performance improvement by adequately adjusting process priorities in realtime)
-- DDC Control (for screen controls through OS + also useful for controlling RGB values with locked sRGB clamp screen)
+- DDC Control (for setting up screen controls through OS)
 
 Added extensions:
 - Blur My Shell
