@@ -24,6 +24,7 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
         - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
+        - https://copr.fedorainfracloud.org/coprs/nxmbit/gnome-perf-patched/repo/fedora-%OS_VERSION%/nxmbit-gnome-perf-patched-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
@@ -34,6 +35,7 @@ modules:
          - ddccontrol-gtk
          - ddccontrol-db
          - ddccontrol
+         - mutter
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -50,6 +52,7 @@ modules:
       - gnome-shell-extension-window-list
       - gnome-classic-session
       - gnome-tweaks
+      - mutter
       
   - type: bling # configure what to pull in from ublue-os/bling
     install:
