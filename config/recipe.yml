@@ -118,4 +118,3 @@ modules:
       - signing.sh
       - reload-font-cache.sh
       - enable-system76-scheduler-service.sh
-      - add-nautilus-untitled-document.sh
