@@ -20,7 +20,7 @@ Replaced packages (RPMs)/usecases:
 
 Installed packages (RPMs):
 - Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
-- System76 Scheduler (for performance improvement by adjusting task priorities)
+- System76 Scheduler (for performance improvement by adequately adjusting process priorities in realtime)
 
 Added extensions:
 - Blur My Shell
@@ -73,7 +73,7 @@ User flatpaks:
 - ProtonPlus
 
 Settings applied by default:
-- Close button from windows removed (because I mapped close button to special mouse key)
+- Close button from windows removed (because I mapped the close button to special mouse key)
 - Set font hinting to "None"
 - Enable "Remove Old Trash files automatically" in Nautilus
 - Set mouse acceleration to flat
