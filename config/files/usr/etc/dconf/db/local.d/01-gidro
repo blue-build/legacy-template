@@ -14,7 +14,7 @@ remove-old-trash-files=true
 accel-profile='flat'
 
 [org/gnome/shell]
-enabled-extensions=['openweather-extension@jenslody.de', 'caffeine@patapon.info', 'blur-my-shell@aunetx']
+enabled-extensions=['openweather-extension@jenslody.de', 'caffeine@patapon.info', 'blur-my-shell@aunetx', 's76-scheduler@mattjakeman.com']
 
 [org/gnome/shell/extensions/blur-my-shell]
 sigma=12

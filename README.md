@@ -20,11 +20,13 @@ Replaced packages (RPMs)/usecases:
 
 Installed packages (RPMs):
 - Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
+- System76 Scheduler (for performance improvement by adjusting task priorities)
 
 Added extensions:
 - Blur My Shell
 - OpenWeather
 - Caffeine
+- System76 Scheduler (needed for integration with Gnome)
 
 Note: Flatpaks below are not separated in the system + user remote. This will maybe get implemented in the future.
 

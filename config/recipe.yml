@@ -23,12 +23,14 @@ modules:
 
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+        - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
          - gnome-shell-extension-caffeine
          - gnome-shell-extension-openweather
-         - gnome-shell-extension-blur-my-shell      
+         - gnome-shell-extension-blur-my-shell
+         - gnome-shell-extension-system76-scheduler
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -111,4 +113,5 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      - reload-font-cache.sh      
+      - reload-font-cache.sh
+      - enable-system76-scheduler-service.sh
