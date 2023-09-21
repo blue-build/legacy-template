@@ -110,7 +110,6 @@ modules:
          - Space Cadet Pinball: com.github.k4zmu2a.spacecadetpinball
          - Grapejuice: net.brinkervii.grapejuice
          - ProtonPlus: com.vysp3r.ProtonPlus
-         - Extension Manager: com.mattjakeman.ExtensionManager
          
   - type: script
     scripts:

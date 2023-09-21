@@ -21,7 +21,7 @@ Replaced packages (RPMs)/usecases:
 Installed packages (RPMs):
 - System76 Scheduler (for performance improvement by adequately adjusting process priorities in realtime)
 - DDC Control (for setting up screen controls through GUI in OS)
-- Extensions (currently tied to pre-installed extensions listed below, I will try to find the way to remove it)
+- Extensions
 
 Added extensions:
 - Blur My Shell
@@ -37,7 +37,6 @@ System(ish) flatpaks (what I consider a must out-of-the-box):
 - Gnome Image Viewer (Loupe)
 - Gnome Snapshot
 - Gnome Document Viewer
-- Extension Manager
 - Gnome Text Editor
 - Sticky Notes
 - Secrets
