@@ -20,7 +20,7 @@ Don't worry, it only requires some basic knowledge about using the terminal and 
 After setup, it is recommended you update this README to describe your custom image.
 
 > **Note**
-> Everywhere in this repository, make sure to replace `ublue-os/startingpoint` with the details of your own repository. Unless you used [`create-ublue-image`](https://github.com/EinoHR/create-ublue-image), in which case the previous repo identifier should already be your repo's details.
+> Everywhere in this repository, make sure to replace `ublue-os/startingpoint` with the details of your own repository. Unless you used one of the automatic repository setup tools in which case the previous repo identifier should already be your repo's details.
 
 > **Warning**
 > To start, you *must* create a branch called `live` which is exclusively for your customizations. That is the **only** branch the GitHub workflow will deploy to your container registry. Don't make any changes to the original "template" branch. It should remain untouched. By using this branch structure, you ensure a clear separation between your own "published image" branch, your development branches, and the original upstream "template" branch. Periodically sync and fast-forward the upstream "template" branch to the most recent revision. Then, simply rebase your `live` branch onto the updated template to effortlessly incorporate the latest improvements into your own repository, without the need for any messy, manual "merge commits".
@@ -29,7 +29,7 @@ After setup, it is recommended you update this README to describe your custom im
 
 The easiest way to start customizing is by looking at and modifying `config/recipe.yml`. It's documented using comments and should be pretty easy to understand.
 
-If you want to add custom configuration files, you can just add them in the `/usr/etc/` directory, which is the official OSTree "configuration template" directory and will be applied to `/etc/` on boot. `usr` is copied into your image by default. If you need to add other directories in the root of your image, that can be done in the Containerfile. Writing to `/var/` in the image builds of OSTree-based distros isn't supported and will not work, as that is a local user-managed directory!
+If you want to add custom configuration files, you can just add them in the `/usr/etc/` directory, which is the official OSTree "configuration template" directory and will be applied to `/etc/` on boot. `config/files/usr` is copied into your image's `/usr` by default. If you need to add other directories in the root of your image, that can be done using the `files` module. Writing to `/var/` in the image builds of OSTree-based distros isn't supported and will not work, as that is a local user-managed directory!
 
 For more information about customization, see [the README in the config directory](config/README.md)
 
