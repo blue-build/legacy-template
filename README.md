@@ -105,7 +105,7 @@ Additional configuration:
   ```
 
 ## Post-Setup which will get integrated into the image
-Install & enable selected extensions in Extensions:
+Install & enable selected extensions in Extension Manager:
 - Quick Close in Overview
 - Rounded Window Corners
 - GTK3 Theme Switcher
@@ -120,7 +120,7 @@ Config changes (one-liner command):
 
 Run this command after install until I implement this into the image:
   ```
-just post-setup
+touch ~/Templates/Untitled\ Document && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher light adw-gtk3 && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher dark adw-gtk3-dark && gsettings set org.gnome.desktop.peripherals.keyboard delay 226 && gsettings set org.gnome.mutter check-alive-timeout 20000
   ```
 
 ## Installation (ISO) [Recommended]

@@ -37,7 +37,3 @@ install-obs-studio-portable:
   distrobox-enter -n obs-studio-portable -- 'bash -c "distrobox-export --app obs"' && \
   echo 'Install complete'
 
-# Gidrov-OS necessary post-setup (until I find the way to implement those into the image)
-post-setup:
-#!/usr/bin/env bash
-touch ~/Templates/Untitled\ Document && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher light adw-gtk3 && gsettings --schemadir ~/.local/share/gnome-shell/extensions/gtk3-theme-switcher@charlieqle/schemas/ set org.gnome.shell.extensions.gtk3-theme-switcher dark adw-gtk3-dark && gsettings set org.gnome.desktop.peripherals.keyboard delay 226 && gsettings set org.gnome.mutter check-alive-timeout 20000
