@@ -20,10 +20,11 @@ modules:
 
   - type: rpm-ostree
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-      # - micro
-      # - starship
+      - micro
+      - starship
+      - fira-code-fonts
       # System apps
       - langpacks-nl # Dutch language packs (systemwide)
       - langpacks-en_GB # British language packs (systemwide)
@@ -36,7 +37,8 @@ modules:
       - tlp-rdw
       # Shells
       - zsh
-      - fish
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
       
     remove:
       - firefox # default firefox removed in favor of flatpak
@@ -49,9 +51,10 @@ modules:
                   # in your custom.just (added by default) or local justfile
       # - nix-installer # shell shortcuts for determinate system's nix installers
       # - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
+      - ublue-update # https://github.com/ublue-os/ublue-update
       - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
+      # https://loft.sh/blog/devpod-release-community-providers/
 
 
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)

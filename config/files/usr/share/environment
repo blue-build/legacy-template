@@ -1,0 +1,1 @@
+SHELL=/usr/bin/zsh

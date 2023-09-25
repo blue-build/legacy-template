@@ -149,13 +149,14 @@ screens:
             # - Joplin: net.cozic.joplin_desktop
             - Logseq: com.logseq.Logseq
             # - Standard Notes: org.standardnotes.standardnotes
-            # - Calibre: com.calibre_ebook.calibre
+            - Calibre: com.calibre_ebook.calibre
         Development:
           description: Tools for software development
           default: true
           packages:
             # - VSCode: com.visualstudio.code
             - DBeaver Community: io.dbeaver.DBeaverCommunity
+            - DB Browser for SQLite: org.sqlitebrowser.sqlitebrowser
             # - Android Studio: com.google.AndroidStudio
         Media:
           description: Tools for playing and editing media (audio, video, images)
@@ -164,7 +165,7 @@ screens:
             - FreeTube: io.freetubeapp.FreeTube
             - VLC media player: org.videolan.VLC
             - Losslesscut: no.mifi.losslesscut
-            # - Shortwave: de.haeckerfelix.Shortwave # Internet radio
+            - Shortwave: de.haeckerfelix.Shortwave # Internet radio
             # - GIMP: org.gimp.GIMP
             # - OBS Studio: com.obsproject.Studio
         Streaming:
