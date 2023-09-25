@@ -72,8 +72,8 @@ screens:
           packages:
             - Calculator: org.gnome.Calculator
             - Calendar: org.gnome.Calendar
+            - Camera: org.gnome.Snapshot
             - Characters: org.gnome.Characters
-            - Cheese: org.gnome.Cheese
             - Clocks: org.gnome.clocks
             - Connections: org.gnome.Connections
             - Contacts: org.gnome.Contacts

@@ -7,16 +7,17 @@ description: My personal customization of uBlue images. Make your own! https://u
 base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: latest # 38, latest is also supported if you want new updates ASAP
 
-# list of modules, executed in order
+# module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
 
   - type: files
     files:
-      - usr: /usr # copy static configurations
-                  # configuration you wish to end up in /etc/ on the booted system should be 
-                  # added into /usr/etc/ as that is the proper "distro" config directory on ostree
-                  # read more in the files module's README
+      - usr: /usr # copies config/files/usr into your image's /usr
+                  #
+                  # configuration you wish to end up in /etc/ on the booted system
+                  # should be added into /usr/etc/ as that is the proper "distro"
+                  # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
     repos:
