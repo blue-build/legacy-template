@@ -21,7 +21,8 @@ modules:
                   # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
-    repos:  
+    repos: 
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-38/swayfx-swayfx-fedora-38.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-38/tofik-nwg-shell-fedora-38.repo
     - https://flathub.org/repo/flathub.flatpakrepo
@@ -33,8 +34,8 @@ modules:
   
     install:
       # - micro
-      # - starship
-          - python-pip
+    - starship
+    - python-pip
     - libadwaita
     - unrar
     - p7zip 
