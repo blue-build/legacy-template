@@ -22,7 +22,7 @@ modules:
 
   - type: rpm-ostree
     repos: 
-    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-38.repo
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-38/swayfx-swayfx-fedora-38.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-38/tofik-nwg-shell-fedora-38.repo
     - https://flathub.org/repo/flathub.flatpakrepo
