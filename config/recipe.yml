@@ -21,11 +21,58 @@ modules:
                   # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
-    repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos:  
+    - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-38/swayfx-swayfx-fedora-38.repo
+    - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-38/tofik-nwg-shell-fedora-38.repo
+    - https://flathub.org/repo/flathub.flatpakrepo
+    - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-38/patrickl-yabridge-fedora-38.repo
+    - https://raw.githubusercontent.com/Luiza1011/swayfx-blue-personal/live/vivaldi.repo
+    - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-38/erikreider-SwayNotificationCenter-fedora-38.repo
+    - https://copr.fedorainfracloud.org/coprs/lchh/navidrome/repo/fedora-38/lchh-navidrome-fedora-38.repo
+    - https://copr.fedorainfracloud.org/coprs/luiza1011/Lu-dotfiles/repo/fedora-38/luiza1011-Lu-dotfiles-fedora-38.repo
+  
     install:
       # - micro
       # - starship
+          - python-pip
+    - libadwaita
+    - unrar
+    - p7zip 
+    - p7zip-plugins
+    - terminator
+    - swayfx
+    - rofi
+    - neovim
+    - pavucontrol
+    - blueman
+    - htop
+    - mc
+    - fastfetch
+    - hyfetch
+    - nemo
+    - nemo-fileroller
+    - nwg-drawer
+    - nwg-look
+    - zsh
+    - tmux
+    - zsh-autosuggestions
+    - waybar
+    - network-manager-applet
+    - grim
+    - pamixer
+    - playerctl
+    - polkit-gnome
+    - swaync
+    - rust
+    - cargo
+    - steam-devices
+    - sddm
+    - firewall-config
+    - noip
+    - mediawriter
+    - lu-blue
+    - vivaldi
+    
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
