@@ -9,6 +9,19 @@ screens:
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
+    command-drop-down:
+      source: yafti.screen.package
+      values:
+        title: Commands to run
+        show_terminal: true
+        package_manager: yafti.plugin.run
+        groups:
+          Mullvad VPN:
+            description: Install Mullvad VPN? Restart after installing. Dont forget to run `sudo systemctl enable --now mullvad-daemon` after install
+            default: true
+            packages:
+            - Desktop: |
+                wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest; rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm; rm /tmp/rpms/MullvadVPN-*.rpm
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
@@ -75,26 +88,33 @@ screens:
             - Photos (Organizer): org.gnome.Photos
             - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
             - Text Editor: org.gnome.TextEditor
-            - Videos (Player): org.gnome.Totem
+            - Todo: org.gnome.Todo
+            # - Videos (Player): org.gnome.Totem
             - Weather: org.gnome.Weather
         System Apps:
           description: System applications for all desktop environments.
           default: true
           packages:
-            - Deja Dup Backups: org.gnome.DejaDup
+            # - Deja Dup Backups: org.gnome.DejaDup
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - Font Downloader: org.gustavoperedo.FontDownloader
-            - Mozilla Firefox: org.mozilla.firefox
+            - Flatsweep: io.github.giantpinkrobots.flatsweep
+            # - Font Downloader: org.gustavoperedo.FontDownloader
+            # - Mozilla Firefox: org.mozilla.firefox
+            - Czkawka: com.github.qarmin.czkawka
+            - qBittorrent: org.qbittorrent.qBittorrent
+            # - Bleachbit: org.bleachbit.BleachBit
         Web Browsers:
-          description: Additional browsers to complement or replace Firefox.
-          default: false
+          description: Additional browsers.
+          default: true
           packages:
+            - Firefox: org.mozilla.firefox
             - Brave: com.brave.Browser
-            - GNOME Web: org.gnome.Epiphany
-            - Google Chrome: com.google.Chrome
-            - Microsoft Edge: com.microsoft.Edge
-            - Opera: com.opera.Opera
+            - Mullvad: net.mullvad.MullvadBrowser
+            - Tor Browser: com.github.micahflee.torbrowser-launcher
+            # - Google Chrome: com.google.Chrome
+            # - Microsoft Edge: com.microsoft.Edge
+            # - Opera: com.opera.Opera
         Gaming:
           description: "Rock and Stone!"
           default: false
@@ -107,16 +127,47 @@ screens:
             - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
             - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
             - Proton Updater for Steam: net.davidotek.pupgui2
+        Communication:
+          description: Tools for communication.
+          default: true
+          packages:
+            # - Slack: com.slack.Slack
+            # - Thunderbird Email: org.mozilla.Thunderbird
+            - Tutanota (Experimental): com.tutanota.Tutanota
+            - Signal Desktop: org.signal.Signal
+            # - Element: im.riot.Riot
         Office:
           description: Boost your productivity.
-          default: false
+          default: true
           packages:
-            - LibreOffice: org.libreoffice.LibreOffice
+            # - Syncthing: me.kozec.syncthingtk
+            - Nextcloud: com.nextcloud.desktopclient.nextcloud
+            - Cryptomator: org.cryptomator.Cryptomator
+            # - LibreOffice: org.libreoffice.LibreOffice
             - OnlyOffice: org.onlyoffice.desktopeditors
-            - Obsidian: md.obsidian.Obsidian
-            - Slack: com.slack.Slack
-            - Standard Notes: org.standardnotes.standardnotes
-            - Thunderbird Email: org.mozilla.Thunderbird
+            # - Obsidian: md.obsidian.Obsidian
+            # - Joplin: net.cozic.joplin_desktop
+            - Logseq: com.logseq.Logseq
+            # - Standard Notes: org.standardnotes.standardnotes
+            - Calibre: com.calibre_ebook.calibre
+        Development:
+          description: Tools for software development
+          default: true
+          packages:
+            # - VSCode: com.visualstudio.code
+            - DBeaver Community: io.dbeaver.DBeaverCommunity
+            - DB Browser for SQLite: org.sqlitebrowser.sqlitebrowser
+            # - Android Studio: com.google.AndroidStudio
+        Media:
+          description: Tools for playing and editing media (audio, video, images)
+          default: true
+          packages:
+            - FreeTube: io.freetubeapp.FreeTube
+            - VLC media player: org.videolan.VLC
+            - Losslesscut: no.mifi.losslesscut
+            - Shortwave: de.haeckerfelix.Shortwave # Internet radio
+            # - GIMP: org.gimp.GIMP
+            # - OBS Studio: com.obsproject.Studio
         Streaming:
           description: Stream to the Internet.
           default: false
@@ -126,7 +177,6 @@ screens:
             - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
             - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
             - Boatswain for Streamdeck: com.feaneron.Boatswain
-
   final-screen:
     source: yafti.screen.title
     values:
