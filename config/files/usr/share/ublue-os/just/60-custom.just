@@ -1,4 +1,15 @@
 !include /usr/share/ublue-os/just/100-bling.just
 
-# Include some of your custom scripts here!
+### Useful features ###
+#
 # Hide just script from "just" prompt, but make it still available by using [private] string above the just script name.
+# Documentation: https://just.systems/man/en/chapter_49.html?highlight=private#private-recipes
+#
+# Example (ignore starting # symbol):
+#
+# [private]
+# private-script:
+# #!/usr/bin/env bash
+# echo "Hello world!"
+
+# Include some of your custom scripts here!
