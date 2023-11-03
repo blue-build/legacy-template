@@ -5,7 +5,7 @@
 # 1. Hide just script from "just" prompt, but make it still available by using [private] string above the just script name.
 #       Documentation: https://just.systems/man/en/chapter_49.html?highlight=private#private-recipes
 #
-#       Example (ignore starting # symbol):
+#       Example:
 #
 #       [private]
 #       private-script:
