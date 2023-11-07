@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: startingpoint
+name: my-ublue
 # description will be included in the image's metadata
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: My Universal Blue image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-asus-nvidia
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -26,6 +26,9 @@ modules:
     install:
       # - micro
       # - starship
+      - easyeffects
+      - virt-manager
+      - samba
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
