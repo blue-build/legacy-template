@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: nerdy0901/my-ublue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: my-ublue
