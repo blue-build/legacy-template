@@ -47,3 +47,8 @@ modules:
       enabled:
         - systemd-sysext.service
   
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Noto
+  
