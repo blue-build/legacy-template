@@ -33,6 +33,7 @@ modules:
       - asusctl
       - asusctl-rog-gui
       - hunspell-vi
+      - waydroid
 
   - type: script
     scripts:
