@@ -4,7 +4,7 @@ name: my-ublue
 description: My Universal Blue image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-nvidia
+base-image: ghcr.io/ublue-os/bazzite-nvidia
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -33,7 +33,6 @@ modules:
       - asusctl
       - asusctl-rog-gui
       - hunspell-vi
-      - waydroid
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
