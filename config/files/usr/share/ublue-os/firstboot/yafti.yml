@@ -1,18 +1,18 @@
-title: Welcome to uBlue
+title: wheezieos
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to uBlue (Alpha)"
+      title: "Welcome to wheezieos (Alpha)"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
   can-we-modify-your-flatpaks:
     source: yafti.screen.consent
     values:
-      title: Welcome, Traveler!
+      title: Welcome, Wheezie!
       condition:
         run: flatpak remotes --columns=name | grep fedora
       description: |
@@ -140,4 +140,4 @@ screens:
         - "Join the Discord Community":
             run: /usr/bin/xdg-open https://discord.gg/XjG48C7VHx
       description: |
-        Thanks for trying uBlue, we hope you enjoy it!
+        Thanks for trying wheezieos, we hope you enjoy it!
