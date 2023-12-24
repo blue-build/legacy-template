@@ -5,7 +5,7 @@ description: i3wm/sway image
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/sericea-nvidia
-image-version: 39 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -24,6 +24,38 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+        - alacritty # Consider other terminal?
+        - fcitx5 
+        - fcitx5-autostart 
+        - fcitx5-gtk
+        - fcitx5-lua 
+        - fcitx5-mozc # Japanese IME Module
+        - fcitx5-qt
+        - fcitx5-qt-module
+        - feh
+        - fontawesome-fonts
+        - terminus-fonts
+        - gnome-settings-daemon # Perhaps there's a lighter xsettings daemon?
+        - i3 
+        - i3blocks
+        - i3lock
+        - maim 
+        # - mpd 
+        - neovim # Remove in favor of appimage?
+        - pamixer 
+        - pcmanfm # GUI File manager, maybe replace with something else.
+        - picom 
+        - qemu-system-arm 
+        - qt5ct 
+        - redshift-gtk
+        - unclutter
+        - virt-install 
+        - virt-manager
+        - virt-viewer 
+        - xclip 
+        - xdotool
+        - xset
+        - zsh
       # - micro
       # - starship
     remove:
@@ -36,7 +68,7 @@ modules:
         # add "!include /usr/share/ublue-os/just/100-bling.just"
         # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
-      - ublue-os-wallpapers
+      # - ublue-os-wallpapers
       # - ublue-update # https://github.com/ublue-os/ublue-update
       # - 1password # install 1Password (stable) and `op` CLI tool
       # - dconf-update-service # a service unit that updates the dconf db on boot
@@ -45,12 +77,16 @@ modules:
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+        - JetBrainsMono
 
-
-  - type: yafti
+  #- type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
       #  will be installed and set up
-    custom-flatpaks:
+  #  custom-flatpaks:
       # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
