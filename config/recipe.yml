@@ -56,3 +56,50 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+    
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        # - FiraCode # don't add "Nerd Font" suffix.
+        # - Hack
+        # - SourceCodePro
+        # - Terminus
+        # - JetBrainsMono
+        # - NerdFontsSymbolsOnly
+      google-fonts:
+        # - Roboto
+        # - Open Sans
+
+  - type: default-flatpaks # if you use yafti in combination with this module, be sure to remove yafti screens for removing Fedora flatpaks
+                           # in /config/files/usr/share/ublue-os/firstboot/yafti.yml, from line 5 to line 45.
+                           # this avoids duplicate functionality, as default-flatpaks removes Fedora flatpaks automatically.
+    notify: true   # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        # - org.gnome.Loupe
+      remove:
+        # - org.gnome.eog
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-name: flathub
+
+  - type: systemd
+    system:
+      enabled:
+        # - example.service
+      disabled:
+        # - example.target
+      masked:
+        # - example.service
+    user:
+      enabled:
+        # - example.timer
+      disabled:
+        # - example.service
+      masked:
+        # - example.service
