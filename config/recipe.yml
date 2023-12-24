@@ -44,18 +44,6 @@ modules:
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
-
-
-  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
-                #  will be installed and set up
-    custom-flatpaks: # this section is optional
-      # - Celluloid: io.github.celluloid_player.Celluloid
-      # - Krita: org.kde.krita
-
-  - type: script
-    scripts:
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
     
   - type: fonts
     fonts:
@@ -69,6 +57,12 @@ modules:
       google-fonts:
         # - Roboto
         # - Open Sans
+
+  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
+                #  will be installed and set up
+    custom-flatpaks: # this section is optional
+      # - Celluloid: io.github.celluloid_player.Celluloid
+      # - Krita: org.kde.krita
 
   - type: default-flatpaks # if you use yafti in combination with this module, be sure to remove yafti screens for removing Fedora flatpaks
                            # in /config/files/usr/share/ublue-os/firstboot/yafti.yml, from line 5 to line 45.
@@ -103,3 +97,8 @@ modules:
         # - example.service
       masked:
         # - example.service
+        
+  - type: script
+    scripts:
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh       
