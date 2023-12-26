@@ -46,7 +46,7 @@ modules:
         - pcmanfm # GUI File manager, maybe replace with something else.
         - picom 
         - qemu-system-arm 
-        - qt5ct 
+        - qt5ct # For QT Dark theme, can I get this working?
         - redshift-gtk
         - unclutter
         - virt-install 
@@ -56,6 +56,11 @@ modules:
         - xdotool
         - xset
         - zsh
+        # Remote File Access
+        - rclone
+        - fuse-sshfs
+        - lftp
+        # - Perhaps a SMB client as well?
       # - micro
       # - starship
     remove:
