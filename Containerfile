@@ -42,8 +42,8 @@ COPY modules /tmp/modules/
 # It is copied from the official container image since it's not available as an RPM.
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
-# Starting with Fedora 39, the main image does not contain kmods
-# COPY --from=ghcr.io/ublue-os/akmods:SPECIFY-YOUR-TAG-HERE /rpms /tmp/rpms
+# Change this if you want different version of akmods. Only use main akmod tag.
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
