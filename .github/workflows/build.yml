@@ -74,10 +74,6 @@ jobs:
 # !!!
 
     steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: containerfile
       - name: Maximize build space
         uses: AdityaGarg8/remove-unwanted-software@v1
         with:
@@ -192,6 +188,11 @@ jobs:
         uses: ASzc/change-string-case-action@v6
         with:
           string: ${{ env.IMAGE_NAME }}
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: containerfile
 
       # Build image using Buildah action
       - name: Build Image
