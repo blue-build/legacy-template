@@ -24,6 +24,36 @@ env:
 # Only deploys the branch named "live". Ignores all other branches, to allow
 # having "development" branches without interfering with GHCR image uploads.
 jobs:
+  template:
+    name: Template Containerfile
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    container:
+      image: registry.gitlab.com/wunker-bunker/ublue-cli
+    strategy:
+      fail-fast: false
+
+      matrix:
+# !!!
+        # Add recipes for all the images you want to build here.
+        # Don't add module configuration files, you will get errors.
+        recipe:
+          - recipe.yml
+# !!!
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a Command
+        run: |
+          ublue template ./config/${{ matrix.recipe }} -o Containerfile
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: containerfile
+          path: Containerfile
   push-ghcr:
     name: Build and push image
     runs-on: ubuntu-22.04
@@ -43,6 +73,10 @@ jobs:
 # !!!
 
     steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: containerfile
       - name: Maximize build space
         uses: AdityaGarg8/remove-unwanted-software@v1
         with:
