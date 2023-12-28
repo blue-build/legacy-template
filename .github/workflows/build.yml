@@ -45,11 +45,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a Command
+      - name: Template Containerfile
         run: |
           ublue template -vv ./config/${{ matrix.recipe }} -o Containerfile
 
-      - name: Upload Artifact
+      - name: Upload Containerfile
         uses: actions/upload-artifact@v2
         with:
           name: containerfile
