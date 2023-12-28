@@ -47,7 +47,7 @@ jobs:
 
       - name: Run a Command
         run: |
-          ublue template ./config/${{ matrix.recipe }} -o Containerfile
+          ublue template -vv ./config/${{ matrix.recipe }} -o Containerfile
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
