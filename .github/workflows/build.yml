@@ -30,7 +30,7 @@ jobs:
     permissions:
       contents: read
     container:
-      image: registry.gitlab.com/wunker-bunker/ublue-cli:0.3.4-test-alpine
+      image: registry.gitlab.com/wunker-bunker/ublue-cli:alpine
     strategy:
       fail-fast: false
 
