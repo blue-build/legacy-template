@@ -48,7 +48,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: sigstore/cosign-installer@v3.3.0
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
 
       - name: Install Cargo
         run: |
@@ -60,7 +59,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          apt-get install -y buildah skopeo
+          sudo apt-get install -y buildah skopeo
 
       - name: Build Image
         env:
