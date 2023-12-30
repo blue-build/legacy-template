@@ -55,9 +55,9 @@ jobs:
         run: |
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-      - name: Install Ublue CLI tool
+      - name: Install BlueBuild tool
         run: |
-          cargo install ublue-rs --locked
+          cargo install blue-build --locked
 
       - name: Install Dependencies
         run: |
@@ -69,7 +69,7 @@ jobs:
           PR_EVENT_NUMBER: ${{ github.event.number }}
           REGISTRY_TOKEN: ${{ github.token }}
         run: |
-          ublue build --push -vv ./config/${{ matrix.recipe }}
+          bb build --push -vv ./config/${{ matrix.recipe }}
 
       - name: Echo outputs
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
