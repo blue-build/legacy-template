@@ -64,10 +64,10 @@ jobs:
       - name: Build Image
         env:
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
-          GITHUB_EVENT_NUMBER: ${{ github.event.number }}
-          GITHUB_TOKEN: ${{ github.token }}
+          PR_EVENT_NUMBER: ${{ github.event.number }}
+          REGISTRY_TOKEN: ${{ github.token }}
         run: |
-          ublue build -vv ./config/${{ matrix.recipe }}
+          ublue build --push -vv ./config/${{ matrix.recipe }}
 
       - name: Echo outputs
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
