@@ -26,8 +26,6 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: read
-    container:
-      image: registry.gitlab.com/wunker-bunker/ublue-cli:0.3.5-test-alpine
     strategy:
       fail-fast: false
 
@@ -40,11 +38,35 @@ jobs:
 # !!!
 
     steps:
+      - name: Maximize build space
+        uses: AdityaGarg8/remove-unwanted-software@v1
+        with:
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+
       - uses: actions/checkout@v2
 
-      - name: Template Containerfile
+      - uses: sigstore/cosign-installer@v3.3.0
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+
+      - name: Install Cargo
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+      - name: Install Ublue CLI tool
+        run: |
+          cargo install --git https://gitlab.com/wunker-bunker/ublue-cli --branch github-support --locked
+
+      - name: Install Dependencies
+        run: |
+          apt-get install -y buildah skopeo
+
+      - name: Build Image
         env:
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
+          GITHUB_EVENT_NUMBER: ${{ github.event.number }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           ublue build -vv ./config/${{ matrix.recipe }}
 
