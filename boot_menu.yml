@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: jonerrr/os
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: os
