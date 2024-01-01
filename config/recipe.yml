@@ -24,11 +24,29 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+      - distrobox
+      - neovim
       # - micro
       # - starship
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+
+  - type: default-flatpaks
+    system:
+      install:
+        - com.bitwarden.desktop
+        - com.usebottles.bottles
+        - com.github.hluk.copyq
+        - com.discordapp.Discord
+        - im.riot.Riot
+        - com.getmailspring.Mailspring
+        - dev.k8slens.OpenLens
+        - tv.plex.PlexDesktop
+        - net.lutris.Lutris
+        - com.getpostman.Postman
+        - org.prismlauncher.PrismLauncher
+        - org.qbittorrent.qBittorrent
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
