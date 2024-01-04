@@ -70,7 +70,6 @@ modules:
       - ibus
       - ibus-setup
       - ibus-libs
-      - ibus-panel
       - ibus-typing-booster
       - ibus-gtk3
       - ibus-gtk4
