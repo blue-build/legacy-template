@@ -66,8 +66,8 @@ screens:
         Video:
           description: Video programs
           default: false
-            - Kdenlive: org.kde.kdenlive
           packages:
+            - Kdenlive: org.kde.kdenlive
             - JellyFin: com.github.iwalton3.jellyfin-media-player
             - mpv: io.mpv.Mpv
         Audio:
