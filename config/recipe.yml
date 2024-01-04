@@ -23,6 +23,7 @@ modules:
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+        - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - waydroid
       - ykpers
@@ -35,6 +36,11 @@ modules:
       - pcsc-tools
       - pcsc-lite-ccid
       - neovim
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin 
     remove:
       - opensc
       - firefox # default firefox removed in favor of flatpak
@@ -42,8 +48,6 @@ modules:
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-      - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
-                  # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
       - laptop # installs TLP and configures your system for laptop usage
