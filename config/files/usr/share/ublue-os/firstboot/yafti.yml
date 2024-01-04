@@ -53,30 +53,6 @@ screens:
         user: false
         system: true
       groups:
-        Core GNOME Apps:
-          description: Core system applications for the GNOME desktop environment.
-          default: true
-          packages:
-            - Calculator: org.gnome.Calculator
-            - Calendar: org.gnome.Calendar
-            - Camera: org.gnome.Snapshot
-            - Characters: org.gnome.Characters
-            - Clocks: org.gnome.clocks
-            - Connections: org.gnome.Connections
-            - Contacts: org.gnome.Contacts
-            - Disk Usage Analyzer: org.gnome.baobab
-            - Document Scanner: org.gnome.SimpleScan
-            - Document Viewer: org.gnome.Evince
-            - Extension Manager: com.mattjakeman.ExtensionManager
-            - Font Viewer: org.gnome.font-viewer
-            - Image Viewer: org.gnome.Loupe
-            - Logs: org.gnome.Logs
-            - Maps: org.gnome.Maps
-            - Photos (Organizer): org.gnome.Photos
-            - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
-            - Text Editor: org.gnome.TextEditor
-            - Videos (Player): org.gnome.Totem
-            - Weather: org.gnome.Weather
         System Apps:
           description: System applications for all desktop environments.
           default: true
