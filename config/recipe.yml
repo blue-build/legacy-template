@@ -34,6 +34,7 @@ modules:
       - gnupg-pkcs11-scd
       - pcsc-tools
       - pcsc-lite-ccid
+      - neovim
     remove:
       - opensc
       - firefox # default firefox removed in favor of flatpak

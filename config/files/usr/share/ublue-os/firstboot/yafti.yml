@@ -24,15 +24,18 @@ screens:
         - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   distrobox-containers:
-    source: yafti.screen.consent
+    source: yafti.screen.package
     values:
       title: Choose Distrobox containers
       show-terminal: true
-      description: |
-        Trialing this for now
-      actions:
-        - run: mkdir -p ~/Containers/datblygiad
-        - run: distrobox create --image ghcr.io/caderidris/datblygiad/datblygiad:latest --name datblygiad --home ~/Containers/datblygiad
+      package_manager: yafti.plugin.run
+      groups:
+        datblygiad:
+          description: Development container
+          default: true
+          packages:
+            - Make directory: mkdir -p ~/Containers/datblygiad
+            - Create container: distrobox create --image ghcr.io/caderidris/datblygiad/datblygiad:latest --name datblygiad --home ~/Containers/datblygiad
   applications:
     source: yafti.screen.package
     values:
