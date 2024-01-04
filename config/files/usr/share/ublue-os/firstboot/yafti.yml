@@ -24,7 +24,7 @@ screens:
         - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   distrobox-containers:
-    source: yafti.screen.package
+    source: yafti.screen.consent
     values:
       title: Choose Distrobox containers
       show-terminal: true
