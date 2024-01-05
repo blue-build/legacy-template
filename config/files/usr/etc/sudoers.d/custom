@@ -1,0 +1,1 @@
+%users ALL=(ALL) NOPASSWD: /usr/bin/rpm-ostree upgrade
