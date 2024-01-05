@@ -35,12 +35,12 @@ modules:
       - gnupg-pkcs11-scd
       - pcsc-tools
       - pcsc-lite-ccid
-      - neovim
       - docker-ce
       - docker-ce-cli
       - containerd.io
       - docker-buildx-plugin
       - docker-compose-plugin 
+      - libappindicator-gtk3
     remove:
       - opensc
       - firefox # default firefox removed in favor of flatpak
@@ -64,3 +64,4 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - mullvad.sh

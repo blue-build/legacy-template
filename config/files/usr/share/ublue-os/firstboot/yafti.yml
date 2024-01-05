@@ -61,13 +61,15 @@ screens:
             - KeePassXC: org.keepassxc.KeePassXC
             - LocalSend: org.localsend.localsend_app
             - Yubico Authenticator: com.yubico.yubioath
+            - Bottles: com.usebottles.bottles
+            - Boxes: org.gnome.Boxes
         Graphics:
           description: Graphical programs
           default: false
           packages:
             - Blender: org.blender.Blender
             - GIMP: org.gimp.GIMP
-            - Krita: org.kde.Krita
+            - Krita: org.kde.krita
             - Inkscape: org.inkscape.Inkscape
             - drawio: com.jgraph.drawio.desktop
             - RawTherapee: com.rawtherapee.RawTherapee
@@ -79,6 +81,7 @@ screens:
             - Kdenlive: org.kde.kdenlive
             - JellyFin: com.github.iwalton3.jellyfin-media-player
             - mpv: io.mpv.Mpv
+            - Bino: org.bino3d.bino
         Audio:
           description: Audio programs
           default: false
@@ -91,7 +94,6 @@ screens:
           description: "Rock and Stone!"
           default: false
           packages:
-            - Bottles: com.usebottles.bottles
             - Discord: com.discordapp.Discord
             - Steam: com.valvesoftware.Steam
             - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
