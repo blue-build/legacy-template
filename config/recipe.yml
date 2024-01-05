@@ -41,6 +41,7 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin 
       - libappindicator-gtk3
+      - wireguard-tools
     remove:
       - opensc
       - firefox # default firefox removed in favor of flatpak
@@ -64,4 +65,4 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      - mullvad.sh
+      # - mullvad.sh
