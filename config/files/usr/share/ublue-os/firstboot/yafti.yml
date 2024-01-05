@@ -60,6 +60,7 @@ screens:
             - Mozilla Firefox: org.mozilla.firefox
             - KeePassXC: org.keepassxc.KeePassXC
             - LocalSend: org.localsend.localsend_app
+            - Yubico Authenticator: com.yubico.yubioath
         Graphics:
           description: Graphical programs
           default: false
@@ -84,6 +85,7 @@ screens:
           packages:
             - Strawberry: org.strawberrymusicplayer.strawberry
             - Reaper: fm.reaper.Reaper
+            - MuseScore: org.musescore.MuseScore
         Gaming:
           description: "Rock and Stone!"
           default: false
@@ -102,6 +104,10 @@ screens:
             - LibreOffice: org.libreoffice.LibreOffice
             - Thunderbird Email: org.mozilla.Thunderbird
             - Teams: com.github.IsmaelMartinez.teams_for_linux
+            - SqliteBrowser: org.sqlitebrowser.sqlitebrowser
+            - Outlook: io.github.mahmoudbahaa.outlook_for_linux
+            - Planify: io.github.alainm23.planify 
+            - Azure Storage Explorer: com.microsoft.AzureStorageExplorer
         Other:
           description: Other programs
           default: false
