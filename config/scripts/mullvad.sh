@@ -6,5 +6,9 @@
 set -oue pipefail
 
 # Your code goes here.
-wget -O /tmp/mullvad.rpm https://mullvad.net/en/download/app/rpm/latest
-rpm-ostree install /tmp/mullvad.rpm
+cd /
+mkdir /tmp/mullvad/
+wget -O /tmp/mullvad/mullvad.rpm https://mullvad.net/en/download/app/rpm/latest
+ls /tmp/mullvad/
+rpm-ostree install ./tmp/mullvad/mullvad.rpm
+
