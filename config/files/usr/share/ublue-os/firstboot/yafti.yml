@@ -85,6 +85,7 @@ screens:
           packages:
             - Strawberry: org.strawberrymusicplayer.strawberry
             - Reaper: fm.reaper.Reaper
+            - Audacity: org.audacityteam.Audacity
             - MuseScore: org.musescore.MuseScore
         Gaming:
           description: "Rock and Stone!"
