@@ -24,7 +24,7 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-        - alacritty # Consider other terminal?
+        - alacritty
         - fcitx5 
         - fcitx5-autostart 
         - fcitx5-gtk
@@ -34,16 +34,12 @@ modules:
         - fcitx5-qt-module
         - feh
         - fontawesome-fonts
-        - terminus-fonts
         - gnome-settings-daemon # Perhaps there's a lighter xsettings daemon?
         - i3 
         - i3blocks
         - i3lock
-        - maim 
-        # - mpd 
+        - pamixer # Volume Control for i3
         - neovim # Remove in favor of appimage?
-        - pamixer 
-        - pcmanfm # GUI File manager, maybe replace with something else.
         - picom 
         - qemu-system-arm 
         - qt5ct # For QT Dark theme, can I get this working?
@@ -54,13 +50,13 @@ modules:
         - virt-viewer 
         - xclip 
         - xdotool
+        - maim 
         - xset
         - zsh
         # Remote File Access
-        - rclone
+        - rclone # Can work as SMB client
         - fuse-sshfs
         - lftp
-        # - Perhaps a SMB client as well?
       # - micro
       # - starship
     remove:
@@ -100,6 +96,8 @@ modules:
       nerd-fonts:
         - Hack
         - JetBrainsMono
+        - SourceCodePro
+        - Terminus
 
   #- type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
