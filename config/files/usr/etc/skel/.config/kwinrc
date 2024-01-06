@@ -1,0 +1,34 @@
+[$Version]
+update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
+
+[Desktops]
+Id_1=7fa8fd24-0169-4bd1-bb49-e90addcdade9
+Id_10=bafd5b49-acda-4447-b3b4-1463434cdcfd
+Id_2=b133b6cd-4238-4f0d-ae55-aea8b7feae0a
+Id_3=8d80e2b3-d9e7-4c2f-8bb8-2f170ae73e0a
+Id_4=f26b16aa-2f2b-47fc-ba1e-6a96a7128a60
+Id_5=354bd8c9-3010-4651-87b3-540f5f9bf3ff
+Id_6=28e8d943-f335-41ed-8ee9-3d28809678ea
+Id_7=4872a296-b9bb-4319-ae06-0d383071109a
+Id_8=8c90bb12-2f34-4423-a930-91f110c9c6d3
+Id_9=c84bec1c-50ba-4e90-8200-0340d1248abe
+Name_10=New Desktop
+Name_2=New Desktop
+Name_3=New Desktop
+Name_4=New Desktop
+Name_5=New Desktop
+Name_6=New Desktop
+Name_7=New Desktop
+Name_8=New Desktop
+Name_9=New Desktop
+Number=10
+Rows=1
+
+[Tiling]
+padding=4
+
+[Tiling][681cee87-8618-59df-93dc-97d30410c57b]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Xwayland]
+Scale=1

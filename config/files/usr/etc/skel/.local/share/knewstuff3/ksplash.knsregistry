@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="488">
+  <name>Minimalistic - Spinning dots [12 colors - white/blue/gree..]</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>Shevchuk</author>
+  <homepage>https://store.kde.org/p/1411617</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>58</rating>
+  <downloads>6428</downloads>
+  <installedfile>/var/home/idris/.local/share/plasma/look-and-feel/shevchuk.spinning-dots-bottom-magenta</installedfile>
+  <id>1411617</id>
+  <releasedate>2020-11-21</releasedate>
+  <summary>24 variants:&lt;br />
+12 loader color options: white, blue, green, red, yellow, pink, magenta, orange, darker blue, darker green, darker gray, darkest gray.&lt;br />
+2 loader positioning options: centered or bottom half.&lt;br />
+&lt;br />
+Want your favorite colors added? Tell me which in this poll:...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/img/00/00/45/12/56/1411617/32dd093fdc7729839e5e110105c7be75cdf3ba6b1db8d3acda5da283f2b161186316.gif</preview>
+  <previewBig>https://images.pling.com/img/00/00/45/12/56/1411617/32dd093fdc7729839e5e110105c7be75cdf3ba6b1db8d3acda5da283f2b161186316.gif</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDEwNDg5NDEiLCJvIjoiMSIsInMiOiIxYmEwNGE3ZWM1NjlkZjk0NDZmYjZmODk4ZDAyN2FhYzk0NzliMWE4MDk4ZTY3YTY2ZDAyYzE4Y2FkODhhYTY1NWNjOTZhYTgyYTU4ZjRmNDEyM2Q1ZDAzNjNjY2FmMWE3Y2ZlY2Y3YzY5NWYzNmNhZmFlMGJkMDEyZjhiNmE0ZSIsInQiOjE3MDQ1NjYyNzIsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.QtGfL3M89bWi3mSJcGlhzY-8M5dBr_Kj_knAdS_p12g/shevchuk.spinning-dots-bottom-magenta.tgz</payload>
+  <tags>linux,minimalism,minimalistic,kde,unix,theme,splashscreen,plasma,plasma##majorversion=5,original-product,gplv2-later</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="488">
+  <name>degears</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>deletedaccount</author>
+  <homepage>https://store.kde.org/p/2099719</homepage>
+  <licence></licence>
+  <version>1.0</version>
+  <rating>50</rating>
+  <downloads>678</downloads>
+  <installedfile>/var/home/idris/.local/share/plasma/look-and-feel/degears</installedfile>
+  <id>2099719</id>
+  <releasedate>2023-10-24</releasedate>
+  <summary>Gears Rotation with bounce</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/74/56/18/2099719/splash.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/74/56/18/2099719/splash.png</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2OTgxMjE1OTkiLCJvIjoiMSIsInMiOiIwZDQwOWU3YmI0OWEyNmFlOGYwN2VmMmMzNWU2NjYyOGNiM2Y3NmIzMzM4N2I1ZmM4ODc2OWE4MTQ4YTZjOWNmOTA0YzJlZTVkZjY1MjhmZTU5ZTI1MDVjZjNhZmUyM2FlNTU0ZDYzYTMwZjk5MjIyMDFhMTEyZmE4NTVjYzlkNyIsInQiOjE3MDQ1NjYxODUsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.8wcXVwAh0z4puDE6LoDH3tV2ntZQMpNq9EL_JmVblbw/degears.tar.gz</payload>
+  <tags>plasma,plasma##majorversion=5,splash,splashscreen,original-product,linux,kde,lgplv3,theme,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

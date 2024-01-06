@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="132">
+  <name>Gruvbox Plus Icon Pack</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>eleuth</author>
+  <homepage>https://store.kde.org/p/1961046</homepage>
+  <licence></licence>
+  <version>v5.0.1</version>
+  <rating>84</rating>
+  <downloads>713</downloads>
+  <installedfile>/var/home/idris/.local/share/icons/Gruvbox-Plus-Dark/*</installedfile>
+  <installedfile>/var/home/idris/.local/share/icons/gruvbox-plus-icon-pack-5.0.zip</installedfile>
+  <id>1961046</id>
+  <releasedate>2024-01-04</releasedate>
+  <summary>GruvboxPlus is an icon pack for Linux (KDE, XFCE, Gnome) based on and inspired by:&lt;br />
+- Suru++&lt;br />
+- OneDark&lt;br />
+- Gruvbox icon pack&lt;br />
+- GruvboxMateria&lt;br />
+- Papirus&lt;br />
+- and original Breeze Dark from KDE.&lt;br />
+&lt;br />
+GruvboxPlus is using color scheme from Gruvbox, both dark and...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/61/36/72/1961046/compilation.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/61/36/72/1961046/compilation.jpg</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE3MDQzNzY2NDAiLCJvIjoiMSIsInMiOiIwOGVlNmY2MTdjMWU2MGI5OGI3Yzk2MDVmNDcyMjc5ZGM0N2UzOTFkODAwODBhNDJkZGE3YWI4MDdhMzZjNjE5NjcwYTdmMDA4ZmNjM2I5ZWFkYWNmMzM3MzdlMTQ3YTFmN2ZkNWI1ZTZlNDBiNzdkYWVlNDI1M2I3MjJjNWZiMyIsInQiOjE3MDQ1NjUzMDcsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.OfDmuPZfo4V76gEqt2L4K6t7ueS3iNdZLLtpzCjwGso/gruvbox-plus-icon-pack.5.0.1.tar.gz</payload>
+  <tags>efi,gruvbox,gplv3,icon-pack,icon-theme,icons,linux,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
