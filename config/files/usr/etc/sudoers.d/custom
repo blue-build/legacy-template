@@ -1,2 +1,2 @@
-%users ALL=(ALL) NOPASSWD: /usr/bin/rpm-ostree upgrade
-%users ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+ALL ALL=(ALL) NOPASSWD: /usr/bin/rpm-ostree upgrade
+ALL ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
