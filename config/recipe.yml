@@ -48,6 +48,8 @@ modules:
         - org.prismlauncher.PrismLauncher
         - org.qbittorrent.qBittorrent
         - com.redis.RedisInsight
+        - hu.kramo.Cartridges
+        - org.gnome.Geary
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
