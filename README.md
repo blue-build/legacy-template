@@ -1,4 +1,4 @@
-# .mykinoite
+# My custom uBlue images
 
 > **Warning**
 > Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
