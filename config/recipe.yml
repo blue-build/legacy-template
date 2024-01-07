@@ -33,6 +33,7 @@ modules:
       - docker-compose-plugin
       - fastfetch
       - fish
+      - gnome-boxes
       # - micro
       # - starship
     remove:
