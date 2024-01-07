@@ -25,32 +25,33 @@ modules:
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
         - alacritty
-        - fcitx5 
-        - fcitx5-autostart 
+        - fcitx5
+        - fcitx5-autostart
         - fcitx5-gtk
-        - fcitx5-lua 
+        - fcitx5-lua
         - fcitx5-mozc # Japanese IME Module
         - fcitx5-qt
         - fcitx5-qt-module
         - feh
+        - terminus-fonts
         - fontawesome-fonts
         - gnome-settings-daemon # Perhaps there's a lighter xsettings daemon?
-        - i3 
+        - i3
         - i3blocks
         - i3lock
         - pamixer # Volume Control for i3
         - neovim # Remove in favor of appimage?
-        - picom 
-        - qemu-system-arm 
+        - picom
+        - qemu-system-arm
         - qt5ct # For QT Dark theme, can I get this working?
         - redshift-gtk
         - unclutter
-        - virt-install 
+        - virt-install
         - virt-manager
-        - virt-viewer 
-        - xclip 
+        - virt-viewer
+        - xclip
         - xdotool
-        - maim 
+        - maim
         - xset
         - zsh
         # Remote File Access
@@ -75,7 +76,7 @@ modules:
       - ibus-libzhuyin
       - ibus-libpinyin
       - ibus-m17n
-      
+
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       - justfiles
@@ -97,7 +98,6 @@ modules:
         - Hack
         - JetBrainsMono
         - SourceCodePro
-        - Terminus
 
   #- type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
