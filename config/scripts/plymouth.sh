@@ -6,3 +6,4 @@
 set -oue pipefail
 
 plymouth-set-default-theme -R abstract_ring
+rpm-ostree initramfs --enable
