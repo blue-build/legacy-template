@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: mykinoite
 # description will be included in the image's metadata
-description: This is my personal OS image based on ublue-os/kinoite-main.
+description: This is my personal OS image based on ublue-os/kinoite-main running on a Lenovo Ideapad S145-14IWL with an Intel i3.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
