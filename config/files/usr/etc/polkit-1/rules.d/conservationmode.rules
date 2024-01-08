@@ -3,7 +3,7 @@
  */
 polkit.addRule(function(action, subject) {
     if (
-      (action.id == "org.projectatomic.rpmostree1.upgrade") &&
+      (action.id == "org.freedesktop.policykit.exec") &&
       (
         action.lookup("program") == "/usr/bin/conservationmodeon" ||
         action.lookup("program") == "/usr/bin/conservationmodeoff" ||
