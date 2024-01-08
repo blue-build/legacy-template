@@ -16,6 +16,7 @@ modules:
 
   - from-file: packages-kinoite.yml
 
-  - type: files
-    files:
-      - kinoite/usr: /usr
+  # - type: files
+  #   files:
+  #     - kinoite/usr: /usr
+ 
