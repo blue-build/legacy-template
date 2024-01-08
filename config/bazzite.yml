@@ -12,7 +12,8 @@ modules:
   # https://universal-blue.org/tinker/modules/files/
   - type: files
     files:
-      - usr: /usr
+      - common/usr: /usr
+      - bazzite/usr: /usr
 
   # https://universal-blue.org/tinker/modules/rpm-ostree/
   - type: rpm-ostree
