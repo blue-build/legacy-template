@@ -1,4 +1,0 @@
-ALL ALL=(ALL) NOPASSWD: /usr/bin/rpm-ostree upgrade
-ALL ALL=(ALL) NOPASSWD: /usr/bin/conservationmodeon
-ALL ALL=(ALL) NOPASSWD: /usr/bin/conservationmodeoff
-ALL ALL=(ALL) NOPASSWD: /usr/bin/conservationmodestatus
