@@ -25,7 +25,7 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
         - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - waydroid
+      # - waydroid
       - ykpers
       - yubikey-personalization-gui
       - yubikey-manager
