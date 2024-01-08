@@ -3,7 +3,8 @@
  */
 polkit.addRule(function(action, subject) {
     if (
-      action.id == "org.freedesktop.accounts.change-own-password"
+      action.id == "org.freedesktop.accounts.change-own-password" ||
+      action.id == "org.freedesktop.udisks2.filesystem-mount-system"
     )
     {
         return polkit.Result.YES;
