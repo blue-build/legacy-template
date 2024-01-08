@@ -14,6 +14,8 @@ modules:
   - from-file: common-packages.yml
   - from-file: common-scripts.yml
 
+  - from-file: packages-kinoite.yml
+
   - type: files
     files:
       - kinoite/usr: /usr
