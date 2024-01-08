@@ -3,7 +3,6 @@
  */
 polkit.addRule(function(action, subject) {
     if (
-      action.id == "org.projectatomic.rpmostree1.upgrade" ||
       action.id == "org.freedesktop.accounts.change-own-password"
     )
     {
