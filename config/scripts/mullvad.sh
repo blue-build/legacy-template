@@ -6,9 +6,6 @@
 set -oue pipefail
 
 # Your code goes here.
-cd /
-mkdir /tmp/mullvad/
-wget -O /tmp/mullvad/mullvad.rpm https://mullvad.net/en/download/app/rpm/latest
-ls /tmp/mullvad/
-rpm-ostree install ./tmp/mullvad/mullvad.rpm
+waydroid init -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor
+
 
