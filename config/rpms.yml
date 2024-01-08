@@ -1,0 +1,27 @@
+  type: rpm-ostree
+  repos:
+    - https://download.docker.com/linux/fedora/docker-ce.repo
+  install:
+    - waydroid
+    - ykpers
+    - yubikey-personalization-gui
+    - yubikey-manager
+    - yubikey-manager-qt
+    - gpg
+    - gnupg2
+    - gnupg-pkcs11-scd
+    - pcsc-tools
+    - pcsc-lite-ccid
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-buildx-plugin
+    - docker-compose-plugin 
+    - libappindicator-gtk3
+    - wireguard-tools
+    - plymouth-plugin-script
+  remove:
+    - opensc
+    - firefox # default firefox removed in favor of flatpak
+    - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+
