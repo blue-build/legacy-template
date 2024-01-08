@@ -1,9 +1,9 @@
 # My custom uBlue images
 
 > **Warning**
-> Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
-> There are breaking changes between this and the previous version.
-> If you are merging changes from the previous (v0) version, please refer to [the heads-up blog post](https://universal-blue.org/blog/2023/09/02/startingpoint-rewrite-heads-up-what-you-need-to-know/).
+> These images are made only for my hardware and may not work on yours, but they could, feel free to try.
+> Anyone that uses AMD/Intel should have no problems booting, but I can't tell you any more than that.
+> Some changes I have made will only affect a certain type of laptop (e.g, I made custom scripts to handle my lenovo laptop's battery conservation mode)
 
 [![build-ublue](https://github.com/noahdotpy/.mykinoite/actions/workflows/build.yml/badge.svg)](https://github.com/noahdotpy/.mykinoite/actions/workflows/build.yml)
 
