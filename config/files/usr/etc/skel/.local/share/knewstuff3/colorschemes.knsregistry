@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="112">
+  <name>Dark Pastels / Gruvbox</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>Luwx</author>
+  <homepage>https://store.kde.org/p/1223601</homepage>
+  <licence></licence>
+  <version>1</version>
+  <rating>55</rating>
+  <downloads>6488</downloads>
+  <installedfile>/var/home/idris/.local/share/color-schemes/DarkPastels.colors</installedfile>
+  <id>1223601</id>
+  <releasedate>2018-03-18</releasedate>
+  <summary>Theme based on Gruvbox Dark - KODE color scheme with some contrast modifications to improve reading.</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/49/34/98/1223601/373345282774b47a115c575783504ae7a09d.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/49/34/98/1223601/373345282774b47a115c575783504ae7a09d.png</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1MjE0MTcxNzkiLCJvIjoiMSIsInMiOiI5MmVlYzJhYjY4YzAwNDNlOGE4ZGRjMWFiNDYyYWYwNDQwNzAyYzUyMGUwOWIwYjMwYzAzNTczOWNiMTA2YmE1YWIzODNmYmEyOTdjZTI3MDA5NzRiMzQ4MThhYmE4MGE5ZTNmZGY4MjQwMjVjNjVhZDg1NzhhZGQ0YjNkMDEyZSIsInQiOjE3MDQ1Njg5MjIsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.HeSA1Yh_Of4FBIBpjIcitcy4kukqOsacNXAAEWsQWrk/DarkPastels.colors</payload>
+  <tags>linux,kde,plasma,colorscheme,theme,unix</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="112">
+  <name>Gruvbox plasma colors</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>adhe</author>
+  <homepage>https://store.kde.org/p/1327717</homepage>
+  <licence></licence>
+  <version>0.1</version>
+  <rating>64</rating>
+  <downloads>69647</downloads>
+  <installedfile>/var/home/idris/.local/share/color-schemes/GruvboxColors.colors</installedfile>
+  <id>1327717</id>
+  <releasedate>2019-09-29</releasedate>
+  <summary>&lt;span style="text-decoration: underline;">&lt;strong>Gruvbox color scheme for Plasma&lt;/strong>&lt;/span>&lt;br />
+&lt;br />
+Based on the gruvbox scheme colors for vim [https://github.com/morhetz/gruvbox](https://github.com/morhetz/gruvbox).&lt;br />
+&lt;br />
+&lt;span style="color: #282828;">◼&lt;/span>&lt;span...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/53/17/49/1327717/e4540e5c3b1a654c897bee697df1588ce8b71.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/53/17/49/1327717/e4540e5c3b1a654c897bee697df1588ce8b71.png</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1Njk3MzExOTUiLCJvIjoiMSIsInMiOiIxODczOWY0OGE3OTgwNTQzMGJhOTVmODEyOTViNmFiOTM0NTA2MmI4OWEwMTA4NGI4M2RjYzQ2MDU3YjA0MzRiNmU0ZmQ0NGJmNDExZDI5ODY1OThkNDE0YzJjZGZhZDM2ZDk5MDhjMTljOGE0OWExZTgyYzczMDNmNjVjZjZmNCIsInQiOjE3MDQ1Njg5MTUsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.z63CIXkN0v3OQdN0C8v2CGUAB5MkhiGIv8Wqhj0AkjI/GruvboxColors.colors.tar.gz</payload>
+  <tags>gplv3,colorscheme,plasma,unix,theme,kde,linux</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

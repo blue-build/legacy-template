@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="107">
+  <name>Simp1e Cursors</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>zoli111</author>
+  <homepage>https://store.kde.org/p/1932768</homepage>
+  <licence></licence>
+  <version>20230817</version>
+  <rating>81</rating>
+  <downloads>6961</downloads>
+  <installedfile>/var/home/idris/.icons/Simp1e-Gruvbox-Dark/*</installedfile>
+  <id>1932768</id>
+  <releasedate>2023-08-17</releasedate>
+  <summary>&lt;strong>Simp1e Cursors&lt;/strong>&lt;br />
+&lt;em>An aesthetic cursor theme for Linux desktops.&lt;/em>&lt;br />
+&lt;br />
+&lt;strong>Available sizes:&lt;/strong>&lt;br />
+&lt;ul>&lt;li> 24x24&lt;/li>&lt;li> 32x32&lt;/li>&lt;li> 48x48&lt;/li>&lt;li> 72x72&lt;/li>&lt;/ul>&lt;br />
+&lt;strong>Available colors:&lt;/strong>&lt;br />
+&lt;ul>&lt;li> Default white and...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/57/95/25/1932768/logo-pling1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/57/95/25/1932768/logo-pling1.png</previewBig>
+  <payload>https://files04.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2OTIyNjIxNzQiLCJvIjoiMSIsInMiOiI3NjFlMjQ3MTc4MjFjNmNkNzU1MmYwZmRjNWI1ZGQ5YmE1NzQwNmY4OWEyZjJiNTJjYWE4ZDZhMjJlZTZjNjkwNTA5MWYyMjZjNGZhNTA3MjIwZGVhMzEyNDVlMDU3Njg0N2I3M2U4NmZhODUxYWIxZGFiOTk4OTEzMDdjMTUzYiIsInQiOjE3MDQ1NjUzODEsInN0ZnAiOm51bGwsInN0aXAiOiI4NS45LjI1My44NCJ9.qy-hqP_DoMR-Yibf39N1xozzzt2vBV3uLkkxD0mIElk/Simp1e-Gruvbox-Dark.tar.xz</payload>
+  <tags>dark,cursor,gplv3,nord,original-product,simple,linux,light,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
