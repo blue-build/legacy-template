@@ -1,0 +1,19 @@
+# image will be published to ghcr.io/<user>/<name>
+name: mybazzite
+# description will be included in the image's metadata
+description: This is my personal OS image based on ublue-os/bazzite running on a Lenovo Ideapad S145-14IWL with an Intel i3.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+modules:
+  - from-file: common-bling.yml
+  - from-file: common-files.yml
+  - from-file: common-packages.yml
+  - from-file: common-scripts.yml
+
+  - type: files
+    files:
+      - bazzite/usr: /usr

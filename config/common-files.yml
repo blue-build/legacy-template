@@ -1,0 +1,4 @@
+# https://universal-blue.org/tinker/modules/files/
+type: files
+files:
+  - common/usr: /usr

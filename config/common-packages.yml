@@ -1,0 +1,10 @@
+# https://universal-blue.org/tinker/modules/rpm-ostree/
+type: rpm-ostree
+install:
+  - zsh
+  - virt-manager
+  - bismuth
+  - tldr
+  - wl-clipboard
+  - qt6-qtwebsockets
+  - qt5-qtwebsockets

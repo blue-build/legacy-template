@@ -1,0 +1,6 @@
+# https://universal-blue.org/tinker/modules/bling/
+type: bling
+install:
+  - justfiles
+  - nix-installer # shell shortcuts for determinate system's nix installers
+  - laptop # installs TLP and configures your system for laptop usage
