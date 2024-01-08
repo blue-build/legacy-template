@@ -1,0 +1,5 @@
+# https://universal-blue.org/tinker/modules/rpm-ostree/
+type: rpm-ostree
+remove:
+  - firefox
+  - firefox-langpacks
