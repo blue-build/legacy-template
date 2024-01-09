@@ -8,63 +8,54 @@
 #
 
 CONFIG_FILE="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
-STATUS=`cat $CONFIG_FILE`
+STATUS=$(cat $CONFIG_FILE)
 
 function help {
-  echo "-- HELP --"
-  echo "$(basename $0) allows you to easily toggle battery conservation mode"
-  echo "subcommands:"
-  echo "  status: Print out if conservation mode is on (1 = on, 0 = off)"
-  echo "  on: Turn conservation mode on"
-  echo "  off: Turn conservation mode off"
-  echo "  toggle: Toggle conservation mode (on <--> off)"
-  echo ""
-  echo "options:"
-  echo "  -h, --help: Show this help menu"
-  echo ""
-  echo "examples:"
-  echo "  $(basename $0) status"
-  echo "  $(basename $0) toggle"
-  exit
+	echo "-- HELP --"
+	echo "$(basename $0) allows you to easily toggle battery conservation mode"
+	echo "subcommands:"
+	echo "  status: Print out if conservation mode is on (1 = on, 0 = off)"
+	echo "  on: Turn conservation mode on"
+	echo "  off: Turn conservation mode off"
+	echo "  toggle: Toggle conservation mode (on <--> off)"
+	echo ""
+	echo "options:"
+	echo "  -h, --help: Show this help menu"
+	echo ""
+	echo "examples:"
+	echo "  $(basename $0) status"
+	echo "  $(basename $0) toggle"
+	exit
 }
 
 function on {
-  echo "Turning conservation mode on"
-  if [[ $STATUS = *"0"* ]]; then
-    echo "1" | pkexec tee $CONFIG_FILE
-  fi
-  echo "Conservation mode is already on"
+	echo "1" | pkexec tee $CONFIG_FILE
 }
 
 function off {
-  echo "Turning conservation mode off"
-  if [[ $STATUS = *"1"* ]]; then
-    echo "0" | pkexec tee $CONFIG_FILE
-  fi
-  echo "Conservation mode is already off"
+	echo "0" | pkexec tee $CONFIG_FILE
 }
 
 function toggle {
-  if [[ $STATUS = *"1"* ]]; then
-    off
-  elif [[ $STATUS = *"0"* ]]; then
-    on
-  fi
+	if [[ $STATUS = *"1"* ]]; then
+		off
+	elif [[ $STATUS = *"0"* ]]; then
+		on
+	fi
 }
 
 if [[ $@ = *"--help"* ]] || [[ $@ = *"-h"* ]]; then
-  help
+	help
 elif [[ $1 = "status" ]]; then
-  echo $STATUS
+	echo $STATUS
 elif [[ $1 = "on" ]]; then
-  on
+	on
 elif [[ $1 = "off" ]]; then
-  off
+	off
 elif [[ $1 = "toggle" ]]; then
-  toggle
+	toggle
 else
-  echo "Refer to the help below for proper use"
-  echo ""
-  help
+	echo "Refer to the help below for proper use"
+	echo ""
+	help
 fi
-
