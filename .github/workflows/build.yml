@@ -116,7 +116,7 @@ jobs:
                  BUILD_TAGS+=("${TIMESTAMP}")
                  BUILD_TAGS+=("testing")
              fi
-          if [[ ${{ github.ref_name }} == "live" ]]; then
+          elif [[ ${{ github.ref_name }} == "live" ]]; then
              BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
              if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
                 [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
