@@ -12,6 +12,7 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: files.yml
   - from-file: rpms.yml
+  - from-file: flatpaks.yml
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       - nix-installer # shell shortcuts for determinate system's nix installers
