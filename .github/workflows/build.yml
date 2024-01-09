@@ -11,8 +11,7 @@ on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-wor
   push:
     branches:
       - live
-      - template
-      - main
+      - testing
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
   pull_request:
@@ -110,11 +109,21 @@ jobs:
           COMMIT_TAGS+=("pr-${{ github.event.number }}${MAJOR_VERSION:+-$MAJOR_VERSION}")
           COMMIT_TAGS+=("${SHA_SHORT}${MAJOR_VERSION:+-$MAJOR_VERSION}")
 
-          BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION:+$MAJOR_VERSION-}${TIMESTAMP}")
-          # --
-
-          BUILD_TAGS+=("${TIMESTAMP}")
-          BUILD_TAGS+=("latest")
+          if [[ ${{ github.ref_name }} == "testing" ]]; then
+             BUILD_TAGS=("${MAJOR_VERSION}-testing" "${MAJOR_VERSION}-testing-${TIMESTAMP}")
+             if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+                [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+                 BUILD_TAGS+=("${TIMESTAMP}")
+                 BUILD_TAGS+=("testing")
+             fi
+          if [[ ${{ github.ref_name }} == "live" ]]; then
+             BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
+             if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+                [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+                 BUILD_TAGS+=("${TIMESTAMP}")
+                 BUILD_TAGS+=("latest")
+             fi
+          fi
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               echo "Generated the following commit tags: "
