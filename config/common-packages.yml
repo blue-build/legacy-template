@@ -5,6 +5,7 @@ repos:
 install:
   - bismuth
   - espanso-wayland
+  - piper
   - qt5-qtwebsockets
   - qt6-qtwebsockets
   - tldr
