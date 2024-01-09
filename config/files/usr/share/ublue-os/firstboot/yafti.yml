@@ -55,11 +55,15 @@ screens:
           description: System applications for all desktop environments.
           default: true
           packages:
+            - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+            - Font Downloader: org.gustavoperedo.FontDownloader
+            - Mozilla Firefox: org.mozilla.firefox
             - KeePassXC: org.keepassxc.KeePassXC
             - LocalSend: org.localsend.localsend_app
             - Yubico Authenticator: com.yubico.yubioath
             - Bottles: com.usebottles.bottles
             - Boxes: org.gnome.Boxes
+            - qView: com.interversehq.qview
         Graphics:
           description: Graphical programs
           default: false
@@ -77,6 +81,7 @@ screens:
           packages:
             - Kdenlive: org.kde.kdenlive
             - JellyFin: com.github.iwalton3.jellyfin-media-player
+            - mpv: io.mpv.Mpv
             - Bino: org.bino3d.bino
         Audio:
           description: Audio programs

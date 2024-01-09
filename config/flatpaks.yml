@@ -4,12 +4,7 @@ system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   repo-title: "Flathub (system)"
-  install:
-    - com.interversehq.qview
-    - com.github.tchx84.Flatseal
-    - org.gustavoperedo.FontDownloader
-    - org.mozilla.firefox
-    - io.mpv.Mpv
 user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   repo-title: "Flathub (user)"

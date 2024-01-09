@@ -20,6 +20,7 @@
     - libappindicator-gtk3
     - wireguard-tools
     - plymouth-plugin-script
+    - pipx
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
