@@ -4,7 +4,7 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/eclipseo/espanso/repo/fedora-%OS_VERSION%/eclipseo-espanso-fedora-%OS_VERSION%.repo
 install:
   - bismuth
-  - espanso
+  - espanso-wayland
   - qt5-qtwebsockets
   - qt6-qtwebsockets
   - tldr
