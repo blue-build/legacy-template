@@ -5,7 +5,7 @@ LABEL com.github.containers.toolbox="true" \
       summary="A cloud-native terminal experience" \
       maintainer="jorge.castro@gmail.com"
 
-COPY extra-packages /
+COPY toolboxes/mybox/extra-packages /
 RUN apk update && \
     apk upgrade && \
     grep -v '^#' /extra-packages | xargs apk add
