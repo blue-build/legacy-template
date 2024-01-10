@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Your code goes here.
-while IFS= read -r pkg; do echo "Installing $pkg" && pipx install $pkg; done < $CONFIG_DIRECTORY/scripts/packages/pipx.pkg
+while IFS= read -r pkg; do echo "Installing $pkg" && PIPX_HOME=/usr/lib/opt/pipx PIPX_BIN_DIR=/var/usrlocal/bin pipx install $pkg; done < $CONFIG_DIRECTORY/scripts/packages/pipx.pkg
