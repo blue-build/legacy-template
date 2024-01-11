@@ -42,7 +42,7 @@ COPY modules /tmp/modules/
 # It is copied from the official container image since it's not available as an RPM.
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
-# Change this if you want different version of akmods. Only use main akmod tag.
+# Change this if you want different version/tag of akmods.
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
 
 # Run the build script, then clean up temp files and finalize container build.
