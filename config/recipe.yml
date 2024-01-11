@@ -58,18 +58,18 @@ modules:
       - fonts
 
   - type: fonts
-  fonts:
-    nerd-fonts:
-      - FiraCode # don't add "Nerd Font" suffix.
-      - CascadiaCode
-      - Hack
-      - SourceCodePro
-      - Terminus
-      - JetBrainsMono
-      - NerdFontsSymbolsOnly
-    google-fonts:
-      - Roboto
-      - Open Sans
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add "Nerd Font" suffix.
+        - CascadiaCode
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
   
   - type:
       yafti
