@@ -6,7 +6,9 @@ polkit.addRule(function(action, subject) {
       (action.id == "org.freedesktop.policykit.exec") &&
       (
         # allow writing to conservation_mode, turning it off or on
-        action.lookup("program") == "/usr/bin/tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+        action.lookup("program") == "/usr/bin/tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode" ||
+
+        action.lookup("program") == "/usr/bin/conservationmodctl"
       )
     )
     {
