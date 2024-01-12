@@ -34,6 +34,7 @@ modules:
       - fastfetch
       - fish
       - gnome-boxes
+      - code
       # - micro
       # - starship
     remove:
@@ -55,7 +56,7 @@ modules:
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
-      - fonts
+      # - fonts
 
   - type: fonts
     fonts:
