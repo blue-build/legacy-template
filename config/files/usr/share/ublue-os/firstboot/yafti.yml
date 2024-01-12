@@ -117,6 +117,24 @@ screens:
           default: false
           packages:
             - WhatsApp: io.github.mimbrero.WhatsAppDesktop
+  pipx-programs:
+    source: yafti.screen.package
+    values:
+      title: Choose Python programs
+      show-terminal: true
+      package_manager: yafti.plugin.run
+      groups:
+        Music Library Organisation:
+          description: Organise your music library
+          default: false
+          packages:
+            - Make directory: pipx install beets
+        Record the Terminal:
+          description: Record terminal session and convert to svg
+          default: false
+          packages:
+            - asciinema: pipx install asciinema
+            - termtosvg: pipx install termtosvg
 
 
   final-screen:
