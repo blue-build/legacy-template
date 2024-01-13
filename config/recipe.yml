@@ -47,6 +47,7 @@ modules:
         - virt-install
         - virt-manager
         - virt-viewer
+        - xrandr
         - xclip
         - xdotool
         - maim
