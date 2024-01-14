@@ -41,6 +41,7 @@ modules:
       - code
       - Koi
       - lightly
+      - solaar
       # - micro
       # - starship
     remove:
