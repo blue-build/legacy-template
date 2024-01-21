@@ -101,6 +101,13 @@ screens:
             - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
             - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
             - Proton Updater for Steam: net.davidotek.pupgui2
+        Programming:
+          description: "Tools I regularly use for data science/software development outside of the datblygiad container"
+          default: false
+          packages:
+            - SqliteBrowser: org.sqlitebrowser.sqlitebrowser
+            - Azure Storage Explorer: com.microsoft.AzureStorageExplorer
+            - JupyterLab Desktop: org.jupyter.jupyterlab
         Office:
           description: Boost your productivity.
           default: false
@@ -108,10 +115,8 @@ screens:
             - LibreOffice: org.libreoffice.LibreOffice
             - Thunderbird Email: org.mozilla.Thunderbird
             - Teams: com.github.IsmaelMartinez.teams_for_linux
-            - SqliteBrowser: org.sqlitebrowser.sqlitebrowser
             - Outlook: io.github.mahmoudbahaa.outlook_for_linux
             - Planify: io.github.alainm23.planify 
-            - Azure Storage Explorer: com.microsoft.AzureStorageExplorer
         Other:
           description: Other programs
           default: false
