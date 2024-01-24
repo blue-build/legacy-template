@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: n16hth4wkk/andromedablue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: AndromedaBlue
