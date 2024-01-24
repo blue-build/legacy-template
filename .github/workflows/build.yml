@@ -43,6 +43,7 @@ jobs:
           - recipe-framework.yml
           - recipe-surface.yml
           - recipe-nvidia.yml
+          - recipe-nv470.yml
 # !!!
 
     steps:
