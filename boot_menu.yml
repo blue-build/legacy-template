@@ -2,4 +2,11 @@ ublue_variants:
   - label: caderidris/idros
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: idros
+      - label: idros-main
+        info: Default image
+      - label: idros-fw
+        info: Framework image
+      - label: idros-surface
+        info: Surface image
+      - label: idros-nv
+        info: Nvidia image
