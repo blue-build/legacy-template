@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: idros-nv
+name: idros-nv470
 # description will be included in the image's metadata
 description: Containerized OS that suits my workflow. Nvidia variant.
 
