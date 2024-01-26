@@ -12,7 +12,8 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - usr: /usr
+      - usr:
+          /usr
           # copy static configurations
           #
           # copies config/files/usr into your image's /usr
@@ -45,11 +46,13 @@ modules:
         - tv.plex.PlexDesktop
         - net.lutris.Lutris
         - com.getpostman.Postman
+        - rest.insomnia.Insomnia
         - org.prismlauncher.PrismLauncher
         - org.qbittorrent.qBittorrent
         - com.redis.RedisInsight
         - hu.kramo.Cartridges
         - org.gnome.Geary
+        - io.github.yuki_iptv.yuki-iptv
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -67,8 +70,8 @@ modules:
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
 
-
-  - type: yafti
+  - type:
+      yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
       #  will be installed and set up
     custom-flatpaks:
