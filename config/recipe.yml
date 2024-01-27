@@ -49,6 +49,7 @@ modules:
        # A flatpak repo can also be added without having to install flatpaks,
        # as long as one of the repo- fields is present
      user:
+     repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
      repo-name: flathub
 
   - type: script
