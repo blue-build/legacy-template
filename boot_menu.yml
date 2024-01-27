@@ -1,5 +1,9 @@
 ublue_variants:
-  - label: n16hth4wkk/andromedablue
+  - label: n16hth4wkk/Ōrora
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: AndromedaBlue
+      - label: orora
+  - label: n16hth4wkk/Ōrora-Nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: orora-nvidia

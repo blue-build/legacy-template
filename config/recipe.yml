@@ -1,11 +1,8 @@
-# image will be published to ghcr.io/<user>/<name>
-name: andromedablue
-# description will be included in the image's metadata
+name: orora
 description: This is my personal OS image.
 
-# the base image to build on top of (FROM) and the version tag to use
+image-version: latest
 base-image: ghcr.io/ublue-os/vauxite-asus
-image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -30,7 +27,7 @@ modules:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
-  - type: bling # configure what to pull in from ublue-os/bling
+  - type: bling
     install:
       - justfiles
         # add "!include /usr/share/ublue-os/just/100-bling.just"
@@ -38,12 +35,10 @@ modules:
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
       # - ublue-update # https://github.com/ublue-os/ublue-update
-      # - 1password # install 1Password (stable) and `op` CLI tool
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
       # - gnome-vrr # enables gnome-vrr for your image
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
-      # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
 
 
