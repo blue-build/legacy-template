@@ -36,7 +36,7 @@ modules:
      # If no repo information is specified, Flathub will be used by default
      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
      repo-name: flathub
-     repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+     # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
      install:
        # - org.gnome.Loupe
        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
