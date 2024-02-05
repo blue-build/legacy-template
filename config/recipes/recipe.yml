@@ -11,3 +11,4 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: modules_config/main.yml
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
