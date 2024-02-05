@@ -1,0 +1,8 @@
+# The "systemd" module streamlines the management of systemd units during image building. Units are divided into "system" and "user" categories, with "system" units managed directly using "systemctl" and user units using "systemctl --global". You can specify which units to enable/disable or unmask/mask under each category.
+
+type: systemd
+system:
+  enabled:
+   # - power-profiles-daemon
+  disabled:
+   # - rpm-ostree-countme.timer

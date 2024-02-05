@@ -1,0 +1,8 @@
+# The bling module can be used to pull in small "bling" into your image. Bling is stuff that doesn't necessitate being configured at build time, in the form of configuration files or program installers.
+
+type: bling # configure what to pull in from ublue-os/bling - https://github.com/ublue-os/bling/tree/main/modules/bling/installers
+install:
+  #- flatpaksync
+  #- dconf-update-service
+  #- ublue-os-wallpapers
+  #- ublue-update

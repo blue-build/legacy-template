@@ -1,0 +1,10 @@
+# The rpm-ostree module offers pseudo-declarative package and repository management using rpm-ostree.
+
+type: rpm-ostree
+#repos: 
+#   - 
+install:
+   #- zsh
+remove:
+   - firefox # default firefox removed in favor of flatpak
+   - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems

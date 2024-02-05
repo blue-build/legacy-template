@@ -1,0 +1,12 @@
+# The fonts module can be used to install fonts from "Nerd Fonts" or "Google Fonts". This module will always download the latest version of a font and properly configure it.
+
+type: fonts
+fonts:
+  nerd-fonts:
+    #- FiraCode # don't add "Nerd Font" suffix.
+    #- Hack
+    #- SourceCodePro
+    #- Terminus
+    #- JetBrainsMono
+    #- NerdFontsSymbolsOnly
+

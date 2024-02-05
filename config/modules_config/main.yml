@@ -1,0 +1,13 @@
+# Here you can put common things that will be used in the default image and the nvidia image
+
+modules:
+   - from-file: modules_config/files.yml
+   - from-file: modules_config/rpm-ostree.yml
+   - from-file: modules_config/default-flatpaks.yml
+   - from-file: modules_config/fonts.yml
+   - from-file: modules_config/bling.yml
+   - from-file: modules_config/systemd.yml
+   - from-file: modules_config/scripts.yml
+
+
+

@@ -9,7 +9,7 @@
 set -oue pipefail
 
 export CONFIG_DIRECTORY="/tmp/config"
-RECIPE_FILE="$CONFIG_DIRECTORY/$RECIPE"
+RECIPE_FILE="$CONFIG_DIRECTORY/recipes/$RECIPE"
 export MODULE_DIRECTORY="/tmp/modules"
 
 # https://mikefarah.gitbook.io/yq/usage/tips-and-tricks#yq-in-a-bash-loop

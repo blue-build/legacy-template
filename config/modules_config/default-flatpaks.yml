@@ -1,0 +1,38 @@
+# The default-flatpaks module can be used to install or uninstall Flatpaks from a configurable remote on every boot. It skips that operation if no changes are detected.
+
+type: default-flatpaks # if included, https://github.com/ublue-os/yafti will be installed and set up
+notify: true # Send notification after install/uninstall is finished (true/false)
+#--------------------------------------------------------------------------------------------------#
+system:
+    # If no repo information is specified, Flathub will be used by default
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub
+    repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+    install:
+     # - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+     # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+     # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
+     # Only normal flatpak applications are (like Floorp Lightning web browser in this example).
+     # Multiple install of same flatpaks with different branches is not supported.
+    remove:
+     # - org.gnome.eog
+     #
+     # A flatpak repo can also be added without having to install flatpaks,
+     # as long as one of the repo- fields is present
+#--------------------------------------------------------------------------------------------------#
+user:
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub
+    #repo-title: "Flathub (user)"
+    install:
+     # - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
+     # - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
+     # - Bottles: com.usebottles.bottles
+     # - Heroic Games Launcher: com.heroicgameslauncher.hgl
+     # - Steam: com.valvesoftware.Steam
+     # - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
+     # - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+     # - Proton GE (Custom Proton Version): com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+     # - Obsidian: md.obsidian.Obsidian
+
+
