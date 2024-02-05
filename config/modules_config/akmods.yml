@@ -1,14 +1,9 @@
 # The akmods module is a tool used for managing and installing kernel modules built by Universal Blue. It simplifies the installation of kernel modules, improving the capabilities of your system.
 
 # Only Universal Blue based images are officially supported. Universal Blue builds with Fedora 38 & below are not supported. Custom kernels are not supported.
-
-name: akmods
-shortdesc: The akmods module is a tool used for managing and installing kernel modules built by Universal Blue.
-readme: https://raw.githubusercontent.com/ublue-os/bling/main/modules/akmods/README.md
-example: |
-  type: akmods
-  install:
-    #- openrazer
-    #- openrgb
-    #- v4l2loopback
-    #- winesync
+type: akmods
+install:
+  #- openrazer
+  #- openrgb
+  #- v4l2loopback
+  #- winesync
