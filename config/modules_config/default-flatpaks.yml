@@ -9,7 +9,7 @@ system:
     repo-name: flathub
     repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
     install:
-     # - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+     # - com.github.tchx84.Flatseal # Flatseal (Permission Manager)
      # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
      # Only normal flatpak applications are (like Floorp Lightning web browser in this example).
@@ -25,14 +25,14 @@ user:
     repo-name: flathub
     #repo-title: "Flathub (user)"
     install:
-     # - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
-     # - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
-     # - Bottles: com.usebottles.bottles
-     # - Heroic Games Launcher: com.heroicgameslauncher.hgl
-     # - Steam: com.valvesoftware.Steam
-     # - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
-     # - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
-     # - Proton GE (Custom Proton Version): com.valvesoftware.Steam.CompatibilityTool.Proton-GE
-     # - Obsidian: md.obsidian.Obsidian
+     # - com.github.GradienceTeam.Gradience/x86_64/stable # Gradience (GTK4 theming)
+     # - com.github.marhkb.Pods # Pods (Graphical Podman Frontend): 
+     # - com.usebottles.bottles # Bottles
+     # - com.heroicgameslauncher.hgl # Heroic Games Launcher
+     # - com.valvesoftware.Steam # Steam
+     # - org.freedesktop.Platform.VulkanLayer.gamescope # Gamescope (Utility)
+     # - org.freedesktop.Platform.VulkanLayer.MangoHud//22.08 # MangoHUD (Utility)
+     # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE # Proton GE (Custom Proton Version)
+     # - md.obsidian.Obsidian # Obsidian
 
 
