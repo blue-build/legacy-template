@@ -6,7 +6,7 @@
 # Editing this file directly is an unsupported configuration.
 
 # Tell build process to exit if there are any errors.
-set -oue pipefail
+set -euo pipefail
 
 export CONFIG_DIRECTORY="/tmp/config"
 RECIPE_FILE="$CONFIG_DIRECTORY/$RECIPE"
@@ -15,7 +15,7 @@ export MODULE_DIRECTORY="/tmp/modules"
 # https://mikefarah.gitbook.io/yq/usage/tips-and-tricks#yq-in-a-bash-loop
 get_yaml_array() {
     # creates array $1 with content at key $2 from $3
-    readarray "$1" < <(echo "$3" | yq -I=0 "$2")
+    readarray -t "$1" < <(echo "$3" | yq -I=0 "$2")
 }
 export -f get_yaml_array # this makes the function available to all modules
 

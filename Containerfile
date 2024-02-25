@@ -28,7 +28,7 @@ COPY config /tmp/config/
 
 # Copy modules
 # The default modules are inside ublue-os/bling
-COPY --from=ghcr.io/ublue-os/bling:latest /modules /tmp/modules/
+COPY --from=ghcr.io/blue-build/modules:latest /modules /tmp/modules/
 # Custom modules overwrite defaults
 COPY modules /tmp/modules/
 
